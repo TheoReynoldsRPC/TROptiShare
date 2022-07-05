@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="" i:type="TycheNodeContainer">
+  <fAttachedData i:nil="true" />
+  <NodeType>Container</NodeType>
+  <Name>InverseWeibullDotMoM</Name>
+  <Description></Description>
+  <Author>Wee Shen Teo (WT02)</Author>
+  <Text></Text>
+  <CacheResultValues>true</CacheResultValues>
+  <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+  <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+  <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+  <NumScenariosDefault>0</NumScenariosDefault>
+  <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+  <Breakpoints />
+  <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+    <InputVariables>
+      <TycheInputVariable>
+        <VariableName>statistics</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName i:nil="true" />
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+    </InputVariables>
+    <OutputVariables>
+      <TycheOutputVariable>
+        <VariableName>Parameters</VariableName>
+        <ChildNodeName>RootFinding</ChildNodeName>
+        <ChildVariableName>Parameters</ChildVariableName>
+        <CachedTypeData i:nil="true" />
+        <IsEnabled>true</IsEnabled>
+      </TycheOutputVariable>
+    </OutputVariables>
+    <IsContainer>true</IsContainer>
+    <RandomSeed>131913567</RandomSeed>
+  </NestedSettings>
+  <Children>
+    <TycheNode xmlns="" i:type="TycheNodeNestedInputs">
+      <fAttachedData i:nil="true" />
+      <NodeType>NestedInputs</NodeType>
+      <Name>Inputs</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text></Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+    </TycheNode>
+    <TycheNode xmlns="" i:type="TycheNodeNestedOutputs">
+      <fAttachedData i:nil="true" />
+      <NodeType>NestedOutputs</NodeType>
+      <Name>Outputs</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text></Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+    </TycheNode>
+    <TycheNode xmlns="" i:type="TycheNodeRootfinding">
+      <fAttachedData i:nil="true" />
+      <NodeType>Rootfinding</NodeType>
+      <Name>RootFinding</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text>arg Moments = Inputs.statistics;
+TargetMean = Moments[0];
+TargetCoV = Sqrt( Moments[1] ) / TargetMean;
+
+kParam = 2 + 1e-8;
+kParam_LBound = 2;
+
+GammaFunction1 = GammaFunction( 1 - 1 / kParam );
+GammaFunction2 = GammaFunction( 1 - 2 / kParam );
+
+FunctionToZero =
+		( TargetCoV ^ 2 + 1 )
+		- ( GammaFunction2 / ( GammaFunction1 ^ 2 ) );
+
+LambdaParam = GammaFunction1 / TargetMean;
+
+out Parameters = ReIndex( { LambdaParam, kParam }, "parameter" );</Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+      <NestedSettings xmlns="" i:type="TycheSettingsRootfinding">
+        <InputVariables />
+        <OutputVariables />
+        <IsContainer>false</IsContainer>
+        <RandomSeed>233540019</RandomSeed>
+        <ZeroFunctionsVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName>FunctionToZero</ChildVariableName>
+        </ZeroFunctionsVariable>
+        <ZeroFunctionsJacobianVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName></ChildVariableName>
+        </ZeroFunctionsJacobianVariable>
+        <VariablesVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName>kParam</ChildVariableName>
+        </VariablesVariable>
+        <VariablesLowerBoundsVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName>kParam_LBound</ChildVariableName>
+        </VariablesLowerBoundsVariable>
+        <VariablesUpperBoundsVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName></ChildVariableName>
+        </VariablesUpperBoundsVariable>
+        <MaximumStepsVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName></ChildVariableName>
+        </MaximumStepsVariable>
+        <FunctionsTolerancesVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName></ChildVariableName>
+        </FunctionsTolerancesVariable>
+        <VariablesTolerancesVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName></ChildVariableName>
+        </VariablesTolerancesVariable>
+        <SuccessOutputVariableName>Rootfinding Success</SuccessOutputVariableName>
+        <SuccessInfoOutputVariableName>Rootfinding Success Info</SuccessInfoOutputVariableName>
+        <NumStepsOutputVariableName>Rootfinding Num Steps</NumStepsOutputVariableName>
+        <FunctionsHistoryOutputVariableName></FunctionsHistoryOutputVariableName>
+        <VariablesHistoryOutputVariableName></VariablesHistoryOutputVariableName>
+      </NestedSettings>
+      <Children>
+        <TycheNode xmlns="" i:type="TycheNodeNestedInputs">
+          <fAttachedData i:nil="true" />
+          <NodeType>NestedInputs</NodeType>
+          <Name>Inputs</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeNestedOutputs">
+          <fAttachedData i:nil="true" />
+          <NodeType>NestedOutputs</NodeType>
+          <Name>Outputs</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+        </TycheNode>
+      </Children>
+      <ChildrenEdges />
+    </TycheNode>
+  </Children>
+  <ChildrenEdges>
+    <TycheEdge>
+      <SourceNodeFullName>InverseWeibullDotMoM\RootFinding</SourceNodeFullName>
+      <SinkNodeFullName>InverseWeibullDotMoM\Outputs</SinkNodeFullName>
+    </TycheEdge>
+    <TycheEdge>
+      <SourceNodeFullName>InverseWeibullDotMoM\Inputs</SourceNodeFullName>
+      <SinkNodeFullName>InverseWeibullDotMoM\RootFinding</SinkNodeFullName>
+    </TycheEdge>
+  </ChildrenEdges>
+</TycheNode>

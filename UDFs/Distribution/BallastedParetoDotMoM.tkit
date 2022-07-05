@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="" i:type="TycheNodeOperation">
+  <fAttachedData i:nil="true" />
+  <NodeType>Operation</NodeType>
+  <Name>BallastedParetoDotMoM</Name>
+  <Description></Description>
+  <Author>Wee Shen Teo (WT02)</Author>
+  <Text>arg statistics = 1;
+TargetMean = statistics[0];
+TargetCoVSquared = statistics[1] / TargetMean ^ 2;
+
+AlphaParam = 2 * TargetCoVSquared / ( TargetCoVSquared - 1 );
+ThetaParam = TargetMean * ( AlphaParam - 1 );
+
+out Parameters = ReIndex( { ThetaParam, AlphaParam }, "parameter" );</Text>
+  <CacheResultValues>true</CacheResultValues>
+  <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+  <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+  <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+  <NumScenariosDefault>0</NumScenariosDefault>
+  <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+  <Breakpoints />
+  <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+    <InputVariables />
+    <OutputVariables />
+    <IsContainer>false</IsContainer>
+    <RandomSeed>825091926</RandomSeed>
+  </NestedSettings>
+  <Children />
+  <ChildrenEdges />
+</TycheNode>

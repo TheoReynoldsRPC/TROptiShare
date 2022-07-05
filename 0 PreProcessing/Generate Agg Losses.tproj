@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheProject xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <TycheProjectFileVersion>2</TycheProjectFileVersion>
+  <TycheVersion>211.0.1.21203</TycheVersion>
+  <IsAuditingEnabled>false</IsAuditingEnabled>
+  <TycheProjectEngineContents>
+    <TycheEngine xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+      <FileVersion>1</FileVersion>
+      <LastLoadedEngineVersion>
+        <BuildNumber>0</BuildNumber>
+        <MajorVersionNumber>0</MajorVersionNumber>
+        <MinorVersionNumber>0</MinorVersionNumber>
+        <PatchNumber>0</PatchNumber>
+      </LastLoadedEngineVersion>
+      <Globals>
+        <ScenarioCount>5</ScenarioCount>
+        <RandomSeed>749216459</RandomSeed>
+        <UsePerNodeSeeding>true</UsePerNodeSeeding>
+        <AutomaticClearResults>false</AutomaticClearResults>
+        <AutomaticFreeMemory>false</AutomaticFreeMemory>
+        <SparseVectorThreshold>0.01</SparseVectorThreshold>
+        <SIMDGlobalNumThreads>-1</SIMDGlobalNumThreads>
+        <ModelDescription></ModelDescription>
+        <ManagedGlobalNumThreads>1</ManagedGlobalNumThreads>
+        <UseDependencyGroups>true</UseDependencyGroups>
+        <CheckIndexingVariables>false</CheckIndexingVariables>
+        <CheckVariablesAndTypes>false</CheckVariablesAndTypes>
+        <FatalReportLevel>None</FatalReportLevel>
+        <IssueWarningForExperimentalFeatures>true</IssueWarningForExperimentalFeatures>
+        <CheckDimensionNames>None</CheckDimensionNames>
+        <CheckNonDistributedFunctions>None</CheckNonDistributedFunctions>
+        <ToolkitRequirements />
+      </Globals>
+      <TopLevelModelNodes>
+        <TycheNode xmlns="" i:type="TycheNodeImport">
+          <fAttachedData i:nil="true" />
+          <NodeType>Import</NodeType>
+          <Name>Import</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings i:nil="true" />
+          <Children />
+          <ChildrenEdges />
+          <ImportSettings>
+            <InputVariables />
+            <OutputVariables>
+              <TycheOutputVariable>
+                <VariableName>CorrelationAssumptions</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>String</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>j</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+              <TycheOutputVariable>
+                <VariableName>SeverityAssumptions</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>String</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>j</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+              <TycheOutputVariable>
+                <VariableName>SeverityCDF</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>j</Name>
+                        <IndexingVariableDetails>
+                          <Name>i1</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+              <TycheOutputVariable>
+                <VariableName>MarketPercentile</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails />
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+            </OutputVariables>
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1263062900</RandomSeed>
+            <FileName>GenerateAggLossesInput.tyc</FileName>
+            <RetainOutputVariables>false</RetainOutputVariables>
+          </ImportSettings>
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeOperation">
+          <fAttachedData i:nil="true" />
+          <NodeType>Operation</NodeType>
+          <Name>PreProcessing</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text>// extract distribution to be used as switch node branch
+arg SeverityAssumptions = Import.SeverityAssumptions;
+out SeverityDistribution[dummydim][1] = SeverityAssumptions["Distribution"];
+
+// create dummy Frequency
+out Frequency[dummydim][1] = 1;</Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+            <InputVariables />
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1820551059</RandomSeed>
+          </NestedSettings>
+          <Children />
+          <ChildrenEdges />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeOperation">
+          <fAttachedData>
+            <Entry Label="Node_Tests" ContentType="CollectionOfNodeTest">
+              <ArrayOfNodeTest xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <NodeTest>
+                  <AssertionsScript></AssertionsScript>
+                  <ExpectedNodeSettings i:nil="true" />
+                  <ExpectedReports />
+                  <ExpectedScript>out NonCatAggLosses = &lt;&lt;4935548.5895648600000000, 4132506.8217702200000000, 250142.9803669450000000, 4528515.0839481500000000, 4137489.2310705000000000&gt;&gt;;
+out NonCatIndLosses[loss][0] = 0.0;
+</ExpectedScript>
+                  <FullNodeName i:nil="true" />
+                  <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+                  <InputNodeSettings i:nil="true" />
+                  <InputScript>out Severities[i, loss][2, { 2, 3 }[i]] = { { &lt;&lt;4935548.5895648600000000, 4132506.8217702200000000, 250142.9803669450000000, 4528515.0839481500000000, 4137489.2310705000000000&gt;&gt;, &lt;&lt;573937.7194549890000000, 1267816.4523094900000000, 130386.7727983740000000, 748948.6702252180000000, 3828305.2539918600000000&gt;&gt; }, { &lt;&lt;947714.6423887460000000, 2865651.3697933400000000, 488724.5304416870000000, 1529830.2064184100000000, 968292.8654365240000000&gt;&gt;, &lt;&lt;3814152.3522790500000000, 88447.9738306254000000, 4909762.5701688200000000, 360426.8666822460000000, 35952.8965782374000000&gt;&gt;, &lt;&lt;907292.1227198090000000, 3688310.0890554500000000, 950187.3061526570000000, 724268.5917299240000000, 3155030.3543917800000000&gt;&gt; } };
+
+out CorrelationAssumptions[i][{"Correlation To Market"}] = {100%}; 
+Out MarketPercentile = Uniform(0,1);
+</InputScript>
+                  <TestName>PostProcessing_Test</TestName>
+                  <TestNodeSettings>
+                    <NumScenarios>5</NumScenarios>
+                    <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+                    <RandomSeed>749216459</RandomSeed>
+                  </TestNodeSettings>
+                  <Tolerance>1E-08</Tolerance>
+                  <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+                  <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+                  <UseInputNodeSettings>false</UseInputNodeSettings>
+                </NodeTest>
+              </ArrayOfNodeTest>
+            </Entry>
+          </fAttachedData>
+          <NodeType>Operation</NodeType>
+          <Name>PostProcessing</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text>// remove dummy dimension and rename variable
+arg Severities = 'Severity Distribution'.Severities;
+out NonCatAggLosses = Severities[0,0];
+
+// create dummy for individual losses
+out NonCatIndLosses[loss][0] = 0.0;
+
+// apply correlation to market percentile
+arg CorrelationAssumptions = Import.CorrelationAssumptions;
+arg MarketPercentile = Import.MarketPercentile;
+
+ApplyTie =
+		CopulaGaussian(
+					ToDouble( CorrelationAssumptions["Correlation To Market"] ),
+					"LinearCorrelation",
+					MarketPercentile,
+					NonCatAggLosses );</Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+            <InputVariables />
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1961954434</RandomSeed>
+          </NestedSettings>
+          <Children />
+          <ChildrenEdges />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeExport">
+          <fAttachedData i:nil="true" />
+          <NodeType>Export</NodeType>
+          <Name>Export</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings i:nil="true" />
+          <Children />
+          <ChildrenEdges />
+          <ExportSettings>
+            <InputVariables>
+              <TycheInputVariable>
+                <VariableName>NonCatAggLosses</VariableName>
+                <AncestorNodeName>PostProcessing</AncestorNodeName>
+                <AncestorVariableName>NonCatAggLosses</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>NonCatIndLosses</VariableName>
+                <AncestorNodeName>PostProcessing</AncestorNodeName>
+                <AncestorVariableName>NonCatIndLosses</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+            </InputVariables>
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1931723186</RandomSeed>
+            <FileName>NonCat.tyc</FileName>
+            <RetainOutputVariables>false</RetainOutputVariables>
+          </ExportSettings>
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeNestedProject">
+          <fAttachedData i:nil="true" />
+          <NodeType>NestedProject</NodeType>
+          <Name>Severity Distribution</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings xmlns="" i:type="TycheSettingsNestedProject">
+            <InputVariables>
+              <TycheInputVariable xmlns="" i:type="TycheInputVariable_NestedProject">
+                <VariableName>SeverityDistribution</VariableName>
+                <AncestorNodeName>PreProcessing</AncestorNodeName>
+                <AncestorVariableName>SeverityDistribution</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+                <ImportNodeName>Import</ImportNodeName>
+                <ImportNodeVariableName>SeverityDistribution</ImportNodeVariableName>
+              </TycheInputVariable>
+              <TycheInputVariable xmlns="" i:type="TycheInputVariable_NestedProject">
+                <VariableName>SeverityAssumptions</VariableName>
+                <AncestorNodeName>Import</AncestorNodeName>
+                <AncestorVariableName>SeverityAssumptions</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+                <ImportNodeName>Import</ImportNodeName>
+                <ImportNodeVariableName>SeverityAssumptions</ImportNodeVariableName>
+              </TycheInputVariable>
+              <TycheInputVariable xmlns="" i:type="TycheInputVariable_NestedProject">
+                <VariableName>SeverityCDF</VariableName>
+                <AncestorNodeName>Import</AncestorNodeName>
+                <AncestorVariableName>SeverityCDF</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+                <ImportNodeName>Import</ImportNodeName>
+                <ImportNodeVariableName>SeverityCDF</ImportNodeVariableName>
+              </TycheInputVariable>
+              <TycheInputVariable xmlns="" i:type="TycheInputVariable_NestedProject">
+                <VariableName>Frequency</VariableName>
+                <AncestorNodeName>PreProcessing</AncestorNodeName>
+                <AncestorVariableName>Frequency</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+                <ImportNodeName>Import</ImportNodeName>
+                <ImportNodeVariableName>Frequency</ImportNodeVariableName>
+              </TycheInputVariable>
+            </InputVariables>
+            <OutputVariables>
+              <TycheOutputVariable xmlns="" i:type="TycheOutputVariable_NestedProject">
+                <VariableName>Severities</VariableName>
+                <ChildNodeName>Export</ChildNodeName>
+                <ChildVariableName>Severities</ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+            </OutputVariables>
+            <IsContainer>true</IsContainer>
+            <RandomSeed>6490156</RandomSeed>
+            <ProjectName>.\Non Cat Severity Distribution.tproj</ProjectName>
+            <NestedProjectInputVariables>
+              <TycheInputVariable_NestedProject>
+                <VariableName>SeverityDistribution</VariableName>
+                <AncestorNodeName>PreProcessing</AncestorNodeName>
+                <AncestorVariableName>SeverityDistribution</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+                <ImportNodeName>Import</ImportNodeName>
+                <ImportNodeVariableName>SeverityDistribution</ImportNodeVariableName>
+              </TycheInputVariable_NestedProject>
+              <TycheInputVariable_NestedProject>
+                <VariableName>SeverityAssumptions</VariableName>
+                <AncestorNodeName>Import</AncestorNodeName>
+                <AncestorVariableName>SeverityAssumptions</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+                <ImportNodeName>Import</ImportNodeName>
+                <ImportNodeVariableName>SeverityAssumptions</ImportNodeVariableName>
+              </TycheInputVariable_NestedProject>
+              <TycheInputVariable_NestedProject>
+                <VariableName>SeverityCDF</VariableName>
+                <AncestorNodeName>Import</AncestorNodeName>
+                <AncestorVariableName>SeverityCDF</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+                <ImportNodeName>Import</ImportNodeName>
+                <ImportNodeVariableName>SeverityCDF</ImportNodeVariableName>
+              </TycheInputVariable_NestedProject>
+              <TycheInputVariable_NestedProject>
+                <VariableName>Frequency</VariableName>
+                <AncestorNodeName>PreProcessing</AncestorNodeName>
+                <AncestorVariableName>Frequency</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+                <ImportNodeName>Import</ImportNodeName>
+                <ImportNodeVariableName>Frequency</ImportNodeVariableName>
+              </TycheInputVariable_NestedProject>
+            </NestedProjectInputVariables>
+            <NestedProjectOutputVariables>
+              <TycheOutputVariable_NestedProject>
+                <VariableName>Severities</VariableName>
+                <ChildNodeName>Export</ChildNodeName>
+                <ChildVariableName>Severities</ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable_NestedProject>
+            </NestedProjectOutputVariables>
+          </NestedSettings>
+          <Children />
+          <ChildrenEdges />
+        </TycheNode>
+      </TopLevelModelNodes>
+      <TopLevelModelEdges>
+        <TycheEdge>
+          <SourceNodeFullName>Import</SourceNodeFullName>
+          <SinkNodeFullName>PreProcessing</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>PostProcessing</SourceNodeFullName>
+          <SinkNodeFullName>Export</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Import</SourceNodeFullName>
+          <SinkNodeFullName>PostProcessing</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>PreProcessing</SourceNodeFullName>
+          <SinkNodeFullName>Severity Distribution</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Import</SourceNodeFullName>
+          <SinkNodeFullName>Severity Distribution</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Severity Distribution</SourceNodeFullName>
+          <SinkNodeFullName>PostProcessing</SinkNodeFullName>
+        </TycheEdge>
+      </TopLevelModelEdges>
+    </TycheEngine>
+  </TycheProjectEngineContents>
+  <TycheProjectGUIContents>
+    <TycheModel xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+      <FileVersion>1</FileVersion>
+      <TopLevelGuiNodes>
+        <TycheGuiNode>
+          <Name>Import</Name>
+          <ElementLeft>212</ElementLeft>
+          <ElementTop>41</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>135</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>PreProcessing</Name>
+          <ElementLeft>-47</ElementLeft>
+          <ElementTop>278</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>90</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>PostProcessing</Name>
+          <ElementLeft>212</ElementLeft>
+          <ElementTop>663</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>90</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Export</Name>
+          <ElementLeft>212</ElementLeft>
+          <ElementTop>856</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>135</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Severity Distribution</Name>
+          <ElementLeft>212</ElementLeft>
+          <ElementTop>471</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>90</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+      </TopLevelGuiNodes>
+      <DebuggingSettings i:nil="true" />
+      <DefaultGridCellFormat i:nil="true" />
+      <ModelInspectionSettings i:nil="true" />
+    </TycheModel>
+  </TycheProjectGUIContents>
+</TycheProject>

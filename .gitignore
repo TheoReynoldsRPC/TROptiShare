@@ -1,0 +1,6 @@
+Raw Data
+
+*.tyc
+/UDFs/C# UDF Builder.tproj
+bin
+obj

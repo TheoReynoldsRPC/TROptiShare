@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="" i:type="TycheNodeCSharp">
+  <fAttachedData i:nil="true" />
+  <NodeType>CSharp</NodeType>
+  <Name>GetMaxAndPositions</Name>
+  <Description></Description>
+  <Author>Gavin Brown (GB07)</Author>
+  <Text></Text>
+  <CacheResultValues>true</CacheResultValues>
+  <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+  <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+  <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+  <NumScenariosDefault>0</NumScenariosDefault>
+  <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+  <Breakpoints />
+  <CSharpSettings>
+    <FullProjectPath>.\GetPositionsUdf_Files\GetMaxAndPositions\GetMaxAndPositions.csproj</FullProjectPath>
+    <FullDLLPath></FullDLLPath>
+    <OperationName>GetMaxAndPositions.GetMaxAndPositions</OperationName>
+    <DisplayUIElement>false</DisplayUIElement>
+    <InputVariables>
+      <TycheInputVariable>
+        <VariableName>input</VariableName>
+        <AncestorNodeName>Operation 2</AncestorNodeName>
+        <AncestorVariableName>input</AncestorVariableName>
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>findOption</VariableName>
+        <AncestorNodeName>Operation 2</AncestorNodeName>
+        <AncestorVariableName>findOption</AncestorVariableName>
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+    </InputVariables>
+    <Data i:nil="true" />
+    <OutputVariables>
+      <TycheOutputVariable>
+        <VariableName>result</VariableName>
+        <ChildNodeName></ChildNodeName>
+        <ChildVariableName></ChildVariableName>
+        <CachedTypeData i:nil="true" />
+        <IsEnabled>true</IsEnabled>
+      </TycheOutputVariable>
+    </OutputVariables>
+    <DebugOption>None</DebugOption>
+    <BuildMode>Release</BuildMode>
+  </CSharpSettings>
+</TycheNode>

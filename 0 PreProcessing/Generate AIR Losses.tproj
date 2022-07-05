@@ -1,0 +1,877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheProject xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <TycheProjectFileVersion>2</TycheProjectFileVersion>
+  <TycheVersion>211.0.1.21203</TycheVersion>
+  <IsAuditingEnabled>false</IsAuditingEnabled>
+  <TycheProjectEngineContents>
+    <TycheEngine xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+      <FileVersion>1</FileVersion>
+      <LastLoadedEngineVersion>
+        <BuildNumber>0</BuildNumber>
+        <MajorVersionNumber>0</MajorVersionNumber>
+        <MinorVersionNumber>0</MinorVersionNumber>
+        <PatchNumber>0</PatchNumber>
+      </LastLoadedEngineVersion>
+      <Globals>
+        <ScenarioCount>10000</ScenarioCount>
+        <RandomSeed>749216459</RandomSeed>
+        <UsePerNodeSeeding>true</UsePerNodeSeeding>
+        <AutomaticClearResults>false</AutomaticClearResults>
+        <AutomaticFreeMemory>false</AutomaticFreeMemory>
+        <SparseVectorThreshold>0.01</SparseVectorThreshold>
+        <SIMDGlobalNumThreads>-1</SIMDGlobalNumThreads>
+        <ModelDescription></ModelDescription>
+        <ManagedGlobalNumThreads>1</ManagedGlobalNumThreads>
+        <UseDependencyGroups>true</UseDependencyGroups>
+        <CheckIndexingVariables>false</CheckIndexingVariables>
+        <CheckVariablesAndTypes>false</CheckVariablesAndTypes>
+        <FatalReportLevel>None</FatalReportLevel>
+        <IssueWarningForExperimentalFeatures>true</IssueWarningForExperimentalFeatures>
+        <CheckDimensionNames>None</CheckDimensionNames>
+        <CheckNonDistributedFunctions>None</CheckNonDistributedFunctions>
+        <ToolkitRequirements />
+      </Globals>
+      <TopLevelModelNodes>
+        <TycheNode xmlns="" i:type="TycheNodeExport">
+          <fAttachedData i:nil="true" />
+          <NodeType>Export</NodeType>
+          <Name>Export YLT</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings i:nil="true" />
+          <Children />
+          <ChildrenEdges />
+          <ExportSettings>
+            <InputVariables>
+              <TycheInputVariable>
+                <VariableName>Losses</VariableName>
+                <AncestorNodeName>Losses By Cedant</AncestorNodeName>
+                <AncestorVariableName>Losses</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>AccidentTime</VariableName>
+                <AncestorNodeName>Upsample</AncestorNodeName>
+                <AncestorVariableName>AccidentTime</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+            </InputVariables>
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1281985669</RandomSeed>
+            <FileName></FileName>
+            <RetainOutputVariables>false</RetainOutputVariables>
+          </ExportSettings>
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeExcelImport">
+          <fAttachedData i:nil="true" />
+          <NodeType>ExcelImport</NodeType>
+          <Name>Run Details</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings i:nil="true" />
+          <Children />
+          <ChildrenEdges />
+          <ExcelImportSettings>
+            <InputVariables i:nil="true" />
+            <OutputVariables i:nil="true" />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1791374948</RandomSeed>
+            <ExcelFileName></ExcelFileName>
+            <ExcelExportVariables />
+            <ExcelImportVariables>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>Scenarios_InputFilepath</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>String</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>MaxScenario</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName i:nil="true" />
+                <CellsRange i:nil="true" />
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Integer</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+            </ExcelImportVariables>
+            <ExcelComplexImportVariables>
+              <TycheOutputVariable_ExcelImport_Complex>
+                <VariableName>Severities_InputFilepath</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <ShapeSheet i:nil="true" />
+                <ShapeRange i:nil="true" />
+                <RowColumnOrdering></RowColumnOrdering>
+                <ValuesSheet></ValuesSheet>
+                <ValuesRange></ValuesRange>
+                <DataType>String</DataType>
+                <ImportHeaders>false</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DimensionNames>cedant</DimensionNames>
+              </TycheOutputVariable_ExcelImport_Complex>
+            </ExcelComplexImportVariables>
+            <RecalculateAfterExport>true</RecalculateAfterExport>
+          </ExcelImportSettings>
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeParallel">
+          <fAttachedData>
+            <Entry Label="Node_Tests" ContentType="CollectionOfNodeTest">
+              <ArrayOfNodeTest xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <NodeTest>
+                  <AssertionsScript></AssertionsScript>
+                  <ExpectedNodeSettings i:nil="true" />
+                  <ExpectedReports />
+                  <ExpectedScript>out Losses[i, loss, peril, lob][{ "EQ.RMS.ELD.2" }, 3, { "Peril1" }, { "LOB1", "LOB2", "LOB3", "LOB4", "LOB5", "LOB6" }] = {{
+{{&lt;&lt;Blank,	26492.0295362342,	4.69219582591439,	Blank,	Blank,	4.69219582591439,	4.69219582591439,	Blank,	4.69219582591439,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	0,	1256.12643646,	Blank,	Blank,	0,	0,	Blank,	5643.4646,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	0,	0,	Blank,	Blank,	0,	4643.4641354,	Blank,	0,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	14319.9886587388,	1258.5541215615,	Blank,	Blank,	135.564654,	6435.16464,	Blank,	4643.864646,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	30625.2194934959,	2222.464556,	Blank,	Blank,	0,	0,	Blank,	0,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	9356.57082432689,	12564.2681156451,	Blank,	Blank,	0,	165435.64567464,	Blank,	0,	Blank&gt;&gt;}}, 
+{{&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	4.69219582591439,	Blank,	Blank,	Blank,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	0,	Blank,	Blank,	Blank,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	1564.165464,	Blank,	Blank,	Blank,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	0,	Blank,	Blank,	Blank,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	0,	Blank,	Blank,	Blank,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	0,	Blank,	Blank,	Blank,	Blank&gt;&gt;}}, 
+{{&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	4.69219582591439,	Blank,	Blank,	Blank,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	0,	Blank,	Blank,	Blank,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	5554,	Blank,	Blank,	Blank,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	5646.54165146,	Blank,	Blank,	Blank,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	16843.464464,	Blank,	Blank,	Blank,	Blank&gt;&gt;, 
+&lt;&lt;Blank,	Blank,	Blank,	Blank,	Blank,	0,	Blank,	Blank,	Blank,	Blank&gt;&gt;}}}};
+</ExpectedScript>
+                  <FullNodeName i:nil="true" />
+                  <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+                  <InputNodeSettings i:nil="true" />
+                  <InputScript>pathlist[index][1] = {"EQ.RMS.ELD.2"};
+Out InputFilepath[i][pathlist] = {"C:\Users\AK09\Desktop\guyc001---exposure-management-poc\0 PreProcessing\Test AIR\Severities\EQ.RMS.ELD.2.1.eld"};
+LossFrequencyTemp=&lt;&lt;Blank,1,1,Blank,Blank,3,1,1,1,Blank&gt;&gt;;
+out LossFrequency=ToInteger(LossFrequencyTemp);
+out MaxLossFreq=3;
+EventIDTemp[loss][MaxLossFreq]={&lt;&lt;Blank,2123,3123,Blank,Blank,6123,7123,8123,9123,Blank&gt;&gt;,&lt;&lt;Blank,Blank,Blank,Blank,Blank,6124,Blank,Blank,Blank,Blank&gt;&gt;,&lt;&lt;Blank,Blank,Blank,Blank,Blank,6125,Blank,Blank,Blank,Blank&gt;&gt;};
+out EventID=ToInteger(EventIDTemp);
+GluedEventIDTemp=&lt;&lt;Blank,2123,3123,Blank,Blank,6123,7123,8123,9123,Blank,Blank,Blank,Blank,Blank,Blank,6124,Blank,Blank,Blank,Blank,Blank,Blank,Blank,Blank,Blank,6125,Blank,Blank,Blank,Blank&gt;&gt;;
+Out GluedEventID=ToInteger(GluedEventIDTemp);
+Out NumScen=10;
+Out SimCount=&lt;&lt;0,1,2,3,4,5,6,7,8,9&gt;&gt;;</InputScript>
+                  <TestName>Losses By Cedant_Test</TestName>
+                  <TestNodeSettings>
+                    <NumScenarios>5</NumScenarios>
+                    <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+                    <RandomSeed>749216459</RandomSeed>
+                  </TestNodeSettings>
+                  <Tolerance>1E-08</Tolerance>
+                  <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+                  <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+                  <UseInputNodeSettings>false</UseInputNodeSettings>
+                </NodeTest>
+              </ArrayOfNodeTest>
+            </Entry>
+          </fAttachedData>
+          <NodeType>Parallel</NodeType>
+          <Name>Losses By Cedant</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text>argparallel InputFilepath = 'Remove Empty Paths'.Severities_InputFilepath;
+
+// ===========
+// Check input data
+// data is assumed to be in following format:
+// - each row represent an event
+// - the first column represent the eventID for lookups
+// - the remaining columns each represent individual peril LoB combination
+// - the header of the remaining columns are of the format: LoB...Peril
+// ===========
+
+// check if file is present
+
+// check consistency with YET
+
+// check if data types are correct
+
+// check if data entries are correct (e.g. non-negative)
+
+// ===========
+// Calculations
+// ===========
+
+// import data from tab separated file (Char(9) represents tab)
+ELT = ImportTextAsNumbers( InputFilepath, Char(9) );
+
+// split event ID from losses
+ELT_EventID = ToInteger( ELT[0] );
+
+// get Peril LOBs combinations
+RawData_Losses = Skip( ELT, 1 );
+Losses_Header = IteratorSize( RawData_Losses );
+Losses_LOBsPerils[i][Length(Losses_Header)] = StringSplit( Losses_Header[i], "..." );
+Losses_LOBs = Losses_LOBsPerils[:,0];
+Losses_Perils = Losses_LOBsPerils[:,1];
+
+// reshape losses for Peril LOBs combinations
+Losses_Index[Losses_LOBs] = i;
+TargetShape[peril,lob][Distinct(Losses_Perils),Where(Losses_LOBs,Losses_Perils==peril)] = 0;
+IndexLookup = Sum[TargetShape,Losses_Perils,Losses_LOBs]( Losses_Index );
+ELT_Losses = RawData_Losses[IndexLookup];
+
+// combine information from simulated events
+arg GluedEventID = Upsample.GluedEventID;
+// lookup position of eventID (flatten loss and sims dimension together )
+// -1 is for events not present hence these are replaced with blanks
+SimPosition = Replace( MultiColumnIndexOf( GluedEventID, ELT_EventID ), -1, ToInteger( Blank ) );
+FlattenLosses = ELT_Losses&lt;&lt;SimPosition&gt;&gt;;
+
+// assign losses to right location
+arg MaxLossFreq = Upsample.MaxLossFreq;
+arg NumScen = Upsample.NumScen;
+arg SimCount = Upsample.SimCount;
+out Losses[loss][MaxLossFreq] = FlattenLosses&lt;&lt;loss * NumScen + SimCount&gt;&gt;;</Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings xmlns="" i:type="TycheSettingsParallel">
+            <InputVariables />
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>2091046672</RandomSeed>
+            <ParalleliseBy>TopDimension</ParalleliseBy>
+            <ParallelisationMethod>Series</ParallelisationMethod>
+            <LocalScenarioCount>0</LocalScenarioCount>
+            <NumThreads>-1</NumThreads>
+            <NumberOfSimChunks>1</NumberOfSimChunks>
+            <AutomaticallyGlueSimChunks>false</AutomaticallyGlueSimChunks>
+            <FreeChunkAllocationsAfterExecution>false</FreeChunkAllocationsAfterExecution>
+            <Grid>
+              <GridTransferType>ByRequest</GridTransferType>
+              <HostName>localhost</HostName>
+              <MaximumGridRequests>100</MaximumGridRequests>
+              <NodesJobTemplate i:nil="true" />
+              <PortRangeHighest>7460</PortRangeHighest>
+              <PortRangeLowest>7443</PortRangeLowest>
+              <Priority>
+                <Value>2000</Value>
+              </Priority>
+              <RuntimeDirectory i:nil="true" />
+              <UseGridEmulation>false</UseGridEmulation>
+              <GridSettingsOrigin>FromParent</GridSettingsOrigin>
+            </Grid>
+            <ReseedEachExecution>true</ReseedEachExecution>
+          </NestedSettings>
+          <Children>
+            <TycheNode xmlns="" i:type="TycheNodeNestedInputs">
+              <fAttachedData i:nil="true" />
+              <NodeType>NestedInputs</NodeType>
+              <Name>Inputs</Name>
+              <Description></Description>
+              <Author>Wee Shen Teo (WT02)</Author>
+              <Text></Text>
+              <CacheResultValues>false</CacheResultValues>
+              <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+              <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+              <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+              <NumScenariosDefault>0</NumScenariosDefault>
+              <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+              <Breakpoints />
+            </TycheNode>
+            <TycheNode xmlns="" i:type="TycheNodeNestedOutputs">
+              <fAttachedData i:nil="true" />
+              <NodeType>NestedOutputs</NodeType>
+              <Name>Outputs</Name>
+              <Description></Description>
+              <Author>Wee Shen Teo (WT02)</Author>
+              <Text></Text>
+              <CacheResultValues>false</CacheResultValues>
+              <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+              <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+              <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+              <NumScenariosDefault>0</NumScenariosDefault>
+              <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+              <Breakpoints />
+            </TycheNode>
+          </Children>
+          <ChildrenEdges />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeOperation">
+          <fAttachedData i:nil="true" />
+          <NodeType>Operation</NodeType>
+          <Name>Remove Empty Paths</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text>// filter for non-blank entries
+arg inSeverities_InputFilepath = 'Run Details'.Severities_InputFilepath;
+out Severities_InputFilepath = Where( inSeverities_InputFilepath, inSeverities_InputFilepath != ToString( Blank ) );</Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+            <InputVariables />
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1331734844</RandomSeed>
+          </NestedSettings>
+          <Children />
+          <ChildrenEdges />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeLoop">
+          <fAttachedData i:nil="true" />
+          <NodeType>Loop</NodeType>
+          <Name>Import YLT</Name>
+          <Description></Description>
+          <Author>Guy Carpenter (U1157691)</Author>
+          <Text>//this node loops over the YET filepaths and imports them, then sets up a global YET with the unique events
+arg YET_AIRInputPath = 'Run Details'.Scenarios_InputFilepath;
+//track which iteration / file this is
+NumFiles = length(YET_AIRInputPath);
+CurrentSourceNum = IterationIndex();
+
+//Import the YET for this iteration
+InputFilepath = YET_AIRInputPath[CurrentSourceNum] ;
+Data_ScenarioAndEventID = ImportTextAsNumbers( InputFilepath, Char(9) );
+
+//set up a dummy for the first iteration
+Label = {"Scenario","EventID"};
+Unique_YET_Opening[column][Label] = Blank ;
+
+//glue together this YET with the previous YETs
+Glue_YET = Glue[sims](Data_ScenarioAndEventID, Unique_YET_Opening);
+
+//identify the unique EventID / Scenario combinations
+SimSelector = Where[sims](Indices(NumScenarios(Glue_YET)), MultiColumnIndexOf(Glue_YET, Glue_YET) == Indices( NumScenarios(Glue_YET)));
+out Unique_YET = Glue_YET&lt;&lt;SimSelector&gt;&gt;;
+
+//this line is used for placing a breakpoint when debugging
+breakline = normal(0,1);</Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings xmlns="" i:type="TycheSettingsLoop">
+            <InputVariables />
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1606734976</RandomSeed>
+            <StartVariables>
+              <TycheChildVariableReference>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableType>Local</ChildVariableType>
+                <ChildVariableName>Unique_YET_Opening</ChildVariableName>
+              </TycheChildVariableReference>
+            </StartVariables>
+            <EndVariables>
+              <TycheChildVariableReference>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableType>Local</ChildVariableType>
+                <ChildVariableName>Unique_YET</ChildVariableName>
+              </TycheChildVariableReference>
+            </EndVariables>
+            <HistoryVariables />
+            <LoopIterationsType>Fixed</LoopIterationsType>
+            <ContinuationVariable>
+              <ChildNodeName></ChildNodeName>
+              <ChildVariableType>Local</ChildVariableType>
+              <ChildVariableName>NumFiles</ChildVariableName>
+            </ContinuationVariable>
+            <NumIterationsVariable>
+              <ChildNodeName></ChildNodeName>
+              <ChildVariableType>Local</ChildVariableType>
+              <ChildVariableName>NumFiles</ChildVariableName>
+            </NumIterationsVariable>
+          </NestedSettings>
+          <Children>
+            <TycheNode xmlns="" i:type="TycheNodeNestedInputs">
+              <fAttachedData i:nil="true" />
+              <NodeType>NestedInputs</NodeType>
+              <Name>Inputs</Name>
+              <Description></Description>
+              <Author>Guy Carpenter (U1157691)</Author>
+              <Text></Text>
+              <CacheResultValues>false</CacheResultValues>
+              <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+              <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+              <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+              <NumScenariosDefault>0</NumScenariosDefault>
+              <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+              <Breakpoints />
+            </TycheNode>
+            <TycheNode xmlns="" i:type="TycheNodeNestedOutputs">
+              <fAttachedData i:nil="true" />
+              <NodeType>NestedOutputs</NodeType>
+              <Name>Outputs</Name>
+              <Description></Description>
+              <Author>Guy Carpenter (U1157691)</Author>
+              <Text></Text>
+              <CacheResultValues>false</CacheResultValues>
+              <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+              <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+              <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+              <NumScenariosDefault>0</NumScenariosDefault>
+              <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+              <Breakpoints />
+            </TycheNode>
+          </Children>
+          <ChildrenEdges />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeOperation">
+          <fAttachedData i:nil="true" />
+          <NodeType>Operation</NodeType>
+          <Name>Upsample</Name>
+          <Description></Description>
+          <Author>Guy Carpenter (U1157691)</Author>
+          <Text>arg YET_AIRInputSim = 'Run Details'.MaxScenario;
+arg inUnique_YET = 'Import YLT'.Unique_YET;
+
+//reorder the YET by scenario
+Unique_YET = inUnique_YET &lt;&lt;SortOrder(inUnique_YET["Scenario"]) &gt;&gt;;
+
+Data_Scenario = ToInteger( Unique_YET["Scenario"] );
+Data_EventID = ToInteger( Unique_YET["EventID"] );
+MaxScenario = Max(YET_AIRInputSim);
+
+// determine non-empty scenarios
+NonEmptyScenarios=ToStochasticVariable( Distinct( Data_Scenario ) );
+CountNonEmptyScenarios = NumScenarios( NonEmptyScenarios );
+
+// determine cutoffs for each scenario
+ScenarioCutOffs = MultiColumnIndexOf( NonEmptyScenarios, Data_Scenario );
+
+// determine loss frequency and reshape YET
+NonEmpty_PreUpsample_LossFrequency =
+		Glue[sims]( Dissipate[sims]( ScenarioCutOffs )&lt;&lt;Indices( CountNonEmptyScenarios - 1 ) + 1&gt;&gt;,
+							NumScenarios( Data_EventID ) - ScenarioCutOffs&lt;&lt;CountNonEmptyScenarios-1&gt;&gt; );
+Lookups_Step1[loss][NonEmpty_PreUpsample_LossFrequency] = loss;
+Lookups_Step2 = Lookups_Step1 + ScenarioCutOffs;
+NonEmpty_PreUpsample_EventID[loss][Max[sims](NonEmpty_PreUpsample_LossFrequency)] = Data_EventID&lt;&lt;Lookups_Step2[loss]&gt;&gt;;
+
+// fill up for empty scenarios
+FullSimToEmptySim = Replace( MultiColumnIndexOf( Indices( MaxScenario ), NonEmptyScenarios - 1 ), -1, Blank );
+PreUpsample_EventID = NonEmpty_PreUpsample_EventID&lt;&lt;FullSimToEmptySim&gt;&gt;;
+PreUpsample_LossFrequency=NonEmpty_PreUpsample_LossFrequency&lt;&lt;FullSimToEmptySim&gt;&gt;;
+
+// upsample to required sim count
+ScenarioPick =
+		if NumScenarios() == MaxScenario then Indices( MaxScenario )
+		else Empirical( Indices( MaxScenario ) );
+out LossFrequency = PreUpsample_LossFrequency&lt;&lt;ScenarioPick&gt;&gt;;
+out MaxLossFreq = Max( LossFrequency );
+out EventID = PreUpsample_EventID&lt;&lt;ScenarioPick&gt;&gt;;
+out GluedEventID = Glue[sims]( EventID );
+out NumScen = NumScenarios( EventID );
+out SimCount = Indices( NumScen );
+
+// simulate accident time for each event
+out AccidentTime[loss][LossFrequency] = Uniform( 0, 1 );</Text>
+          <CacheResultValues>false</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+            <InputVariables />
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1549839080</RandomSeed>
+          </NestedSettings>
+          <Children />
+          <ChildrenEdges />
+        </TycheNode>
+      </TopLevelModelNodes>
+      <TopLevelModelEdges>
+        <TycheEdge>
+          <SourceNodeFullName>Losses By Cedant</SourceNodeFullName>
+          <SinkNodeFullName>Export YLT</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Run Details</SourceNodeFullName>
+          <SinkNodeFullName>Remove Empty Paths</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Remove Empty Paths</SourceNodeFullName>
+          <SinkNodeFullName>Losses By Cedant</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Run Details</SourceNodeFullName>
+          <SinkNodeFullName>Import YLT</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Run Details</SourceNodeFullName>
+          <SinkNodeFullName>Upsample</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Import YLT</SourceNodeFullName>
+          <SinkNodeFullName>Upsample</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Upsample</SourceNodeFullName>
+          <SinkNodeFullName>Losses By Cedant</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Upsample</SourceNodeFullName>
+          <SinkNodeFullName>Export YLT</SinkNodeFullName>
+        </TycheEdge>
+      </TopLevelModelEdges>
+    </TycheEngine>
+  </TycheProjectEngineContents>
+  <TycheProjectGUIContents>
+    <TycheModel xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+      <FileVersion>1</FileVersion>
+      <TopLevelGuiNodes>
+        <TycheGuiNode>
+          <Name>Export YLT</Name>
+          <ElementLeft>235</ElementLeft>
+          <ElementTop>627</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>135</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Run Details</Name>
+          <ElementLeft>235</ElementLeft>
+          <ElementTop>65</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>135</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Losses By Cedant</Name>
+          <ElementLeft>602</ElementLeft>
+          <ElementTop>455</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>90</ElementHeight>
+          <Children>
+            <TycheGuiNode>
+              <Name>Inputs</Name>
+              <ElementLeft>250</ElementLeft>
+              <ElementTop>90</ElementTop>
+              <ElementWidth>250</ElementWidth>
+              <ElementHeight>90</ElementHeight>
+              <Children />
+              <VisualNodeSettings>
+                <ShowIcon>true</ShowIcon>
+                <ShowTitle>true</ShowTitle>
+                <ShowBorder>true</ShowBorder>
+                <ShowBackground>true</ShowBackground>
+                <IconString></IconString>
+                <TitleLocation>Embed</TitleLocation>
+                <TitleColourString>#FF000000</TitleColourString>
+                <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+                <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+                <BorderColourString>#FF800080</BorderColourString>
+                <IsIconStandardSize>true</IsIconStandardSize>
+                <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+                <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+                <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+                <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+                <FloatingTitleWidth>120</FloatingTitleWidth>
+                <FloatingTitleHeight>40</FloatingTitleHeight>
+              </VisualNodeSettings>
+              <OutliningStatus />
+              <IsBackwardsNode>false</IsBackwardsNode>
+              <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+            </TycheGuiNode>
+            <TycheGuiNode>
+              <Name>Outputs</Name>
+              <ElementLeft>250</ElementLeft>
+              <ElementTop>540</ElementTop>
+              <ElementWidth>250</ElementWidth>
+              <ElementHeight>90</ElementHeight>
+              <Children />
+              <VisualNodeSettings>
+                <ShowIcon>true</ShowIcon>
+                <ShowTitle>true</ShowTitle>
+                <ShowBorder>true</ShowBorder>
+                <ShowBackground>true</ShowBackground>
+                <IconString></IconString>
+                <TitleLocation>Embed</TitleLocation>
+                <TitleColourString>#FF000000</TitleColourString>
+                <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+                <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+                <BorderColourString>#FF800080</BorderColourString>
+                <IsIconStandardSize>true</IsIconStandardSize>
+                <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+                <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+                <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+                <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+                <FloatingTitleWidth>120</FloatingTitleWidth>
+                <FloatingTitleHeight>40</FloatingTitleHeight>
+              </VisualNodeSettings>
+              <OutliningStatus />
+              <IsBackwardsNode>false</IsBackwardsNode>
+              <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+            </TycheGuiNode>
+          </Children>
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Remove Empty Paths</Name>
+          <ElementLeft>602</ElementLeft>
+          <ElementTop>282</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>90</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Import YLT</Name>
+          <ElementLeft>235</ElementLeft>
+          <ElementTop>266</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>90</ElementHeight>
+          <Children>
+            <TycheGuiNode>
+              <Name>Inputs</Name>
+              <ElementLeft>250</ElementLeft>
+              <ElementTop>90</ElementTop>
+              <ElementWidth>250</ElementWidth>
+              <ElementHeight>90</ElementHeight>
+              <Children />
+              <VisualNodeSettings>
+                <ShowIcon>true</ShowIcon>
+                <ShowTitle>true</ShowTitle>
+                <ShowBorder>true</ShowBorder>
+                <ShowBackground>true</ShowBackground>
+                <IconString></IconString>
+                <TitleLocation>Embed</TitleLocation>
+                <TitleColourString>#FF000000</TitleColourString>
+                <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+                <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+                <BorderColourString>#FF800080</BorderColourString>
+                <IsIconStandardSize>true</IsIconStandardSize>
+                <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+                <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+                <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+                <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+                <FloatingTitleWidth>120</FloatingTitleWidth>
+                <FloatingTitleHeight>40</FloatingTitleHeight>
+              </VisualNodeSettings>
+              <OutliningStatus />
+              <IsBackwardsNode>false</IsBackwardsNode>
+              <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+            </TycheGuiNode>
+            <TycheGuiNode>
+              <Name>Outputs</Name>
+              <ElementLeft>250</ElementLeft>
+              <ElementTop>540</ElementTop>
+              <ElementWidth>250</ElementWidth>
+              <ElementHeight>90</ElementHeight>
+              <Children />
+              <VisualNodeSettings>
+                <ShowIcon>true</ShowIcon>
+                <ShowTitle>true</ShowTitle>
+                <ShowBorder>true</ShowBorder>
+                <ShowBackground>true</ShowBackground>
+                <IconString></IconString>
+                <TitleLocation>Embed</TitleLocation>
+                <TitleColourString>#FF000000</TitleColourString>
+                <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+                <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+                <BorderColourString>#FF800080</BorderColourString>
+                <IsIconStandardSize>true</IsIconStandardSize>
+                <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+                <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+                <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+                <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+                <FloatingTitleWidth>120</FloatingTitleWidth>
+                <FloatingTitleHeight>40</FloatingTitleHeight>
+              </VisualNodeSettings>
+              <OutliningStatus />
+              <IsBackwardsNode>false</IsBackwardsNode>
+              <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+            </TycheGuiNode>
+          </Children>
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Upsample</Name>
+          <ElementLeft>235</ElementLeft>
+          <ElementTop>411</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>90</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+      </TopLevelGuiNodes>
+      <DebuggingSettings i:nil="true" />
+      <DefaultGridCellFormat i:nil="true" />
+      <ModelInspectionSettings i:nil="true" />
+    </TycheModel>
+  </TycheProjectGUIContents>
+</TycheProject>

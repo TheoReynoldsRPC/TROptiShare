@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ToolkitManifest ManifestVersion="1">
+  <Name>OptimiserUDFs</Name>
+  <Version>0.0.0.0</Version>
+  <Author />
+  <ReleaseState>Development</ReleaseState>
+  <RequireFullyQualifiedNames>False</RequireFullyQualifiedNames>
+  <Dependencies />
+  <Items>
+    <Item>
+      <Name>BallastedParetoDotMoM</Name>
+      <Category>Distribution</Category>
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>Distribution\BallastedParetoDotMoM.tkit</DefinitionLocation>
+    </Item>
+    <Item>
+      <Name>CovarianceMatrix</Name>
+      <Category />
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>CovarianceMatrix.tkit</DefinitionLocation>
+    </Item>
+    <Item>
+      <Name>GetMaxAndPositions</Name>
+      <Category />
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>GetMaxAndPositions.tkit</DefinitionLocation>
+    </Item>
+    <Item>
+      <Name>GetOEPContribution</Name>
+      <Category />
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>GetOEPContribution.tkit</DefinitionLocation>
+    </Item>
+    <Item>
+      <Name>ImportTextAsNumbers</Name>
+      <Category />
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>ImportTextAsNumbers.tkit</DefinitionLocation>
+    </Item>
+    <Item>
+      <Name>InverseGaussianDotCDF</Name>
+      <Category>Distribution</Category>
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>Distribution\InverseGaussianDotCDF.tkit</DefinitionLocation>
+    </Item>
+    <Item>
+      <Name>InverseGaussianDotCDFInverse</Name>
+      <Category>Distribution</Category>
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>Distribution\InverseGaussianDotCDFInverse.tkit</DefinitionLocation>
+    </Item>
+    <Item>
+      <Name>InverseGaussianDotMoM</Name>
+      <Category>Distribution</Category>
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>Distribution\InverseGaussianDotMoM.tkit</DefinitionLocation>
+    </Item>
+    <Item>
+      <Name>InverseWeibullDotMoM</Name>
+      <Category>Distribution</Category>
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>Distribution\InverseWeibullDotMoM.tkit</DefinitionLocation>
+    </Item>
+    <Item>
+      <Name>NormalAlt</Name>
+      <Category />
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>NormalAlt.tkit</DefinitionLocation>
+    </Item>
+    <Item>
+      <Name>StochasticLookup</Name>
+      <Category />
+      <Type>UserDefinedFunction</Type>
+      <DefinitionLocation>StochasticLookup.tkit</DefinitionLocation>
+    </Item>
+  </Items>
+</ToolkitManifest>

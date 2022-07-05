@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheProject xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <TycheProjectFileVersion>2</TycheProjectFileVersion>
+  <TycheVersion>211.0.1.21203</TycheVersion>
+  <IsAuditingEnabled>false</IsAuditingEnabled>
+  <TycheProjectEngineContents>
+    <TycheEngine xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+      <FileVersion>1</FileVersion>
+      <LastLoadedEngineVersion>
+        <BuildNumber>0</BuildNumber>
+        <MajorVersionNumber>0</MajorVersionNumber>
+        <MinorVersionNumber>0</MinorVersionNumber>
+        <PatchNumber>0</PatchNumber>
+      </LastLoadedEngineVersion>
+      <Globals>
+        <ScenarioCount>10000</ScenarioCount>
+        <RandomSeed>749216459</RandomSeed>
+        <UsePerNodeSeeding>true</UsePerNodeSeeding>
+        <AutomaticClearResults>false</AutomaticClearResults>
+        <AutomaticFreeMemory>false</AutomaticFreeMemory>
+        <SparseVectorThreshold>0.01</SparseVectorThreshold>
+        <SIMDGlobalNumThreads>-1</SIMDGlobalNumThreads>
+        <ModelDescription></ModelDescription>
+        <ManagedGlobalNumThreads>1</ManagedGlobalNumThreads>
+        <UseDependencyGroups>true</UseDependencyGroups>
+        <CheckIndexingVariables>false</CheckIndexingVariables>
+        <CheckVariablesAndTypes>false</CheckVariablesAndTypes>
+        <FatalReportLevel>None</FatalReportLevel>
+        <IssueWarningForExperimentalFeatures>true</IssueWarningForExperimentalFeatures>
+        <CheckDimensionNames>None</CheckDimensionNames>
+        <CheckNonDistributedFunctions>None</CheckNonDistributedFunctions>
+        <ToolkitRequirements />
+      </Globals>
+      <TopLevelModelNodes>
+        <TycheNode xmlns="" i:type="TycheNodeImport">
+          <fAttachedData i:nil="true" />
+          <NodeType>Import</NodeType>
+          <Name>Cedant</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings i:nil="true" />
+          <Children />
+          <ChildrenEdges />
+          <ImportSettings>
+            <InputVariables />
+            <OutputVariables>
+              <TycheOutputVariable>
+                <VariableName>NonCatIndLosses</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>source</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>peril</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>lob</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>loss</Name>
+                        <IndexingVariableDetails i:nil="true" />
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+            </OutputVariables>
+            <IsContainer>false</IsContainer>
+            <RandomSeed>258479135</RandomSeed>
+            <FileName></FileName>
+            <RetainOutputVariables>false</RetainOutputVariables>
+          </ImportSettings>
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeOperation">
+          <fAttachedData>
+            <Entry Label="Node_Tests" ContentType="CollectionOfNodeTest">
+              <ArrayOfNodeTest xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <NodeTest>
+                  <AssertionsScript></AssertionsScript>
+                  <ExpectedNodeSettings i:nil="true" />
+                  <ExpectedReports />
+                  <ExpectedScript>out NonCatIndLosses[source, peril, lob, loss][{ "Source1" }, { "peril1" }, { "lob1" }, 3] = { { { { 122807.0175438600000000, 877192.9824561400000000, 0.0000000000000000 } } } };
+out NonCatIndReinstatement[source, peril, lob, loss][{ "Source1" }, { "peril1" }, { "lob1" }, 3] = { { { { 0.0,0.0,0.0} } } };
+out Premium[peril, lob][{ "peril1" }, { "lob1" }] = { { 10000.0} };
+</ExpectedScript>
+                  <FullNodeName i:nil="true" />
+                  <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+                  <InputNodeSettings i:nil="true" />
+                  <InputScript>out CedantNonCatIndLosses[source,peril,lob,loss][{"Source1"},{"peril1"},{"lob1"},3]={{{{150000.00,2500000.00,0}}}};
+out CoveredLOBs ="lob1";
+out Limit=1e6;
+out Retention=1e4;
+out Reinstatements="0@100%";
+out UpfrontPremium=1e4;
+</InputScript>
+                  <TestName>SimpleTest</TestName>
+                  <TestNodeSettings>
+                    <NumScenarios>5</NumScenarios>
+                    <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+                    <RandomSeed>749216459</RandomSeed>
+                  </TestNodeSettings>
+                  <Tolerance>1E-08</Tolerance>
+                  <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+                  <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+                  <UseInputNodeSettings>false</UseInputNodeSettings>
+                </NodeTest>
+                <NodeTest>
+                  <AssertionsScript></AssertionsScript>
+                  <ExpectedNodeSettings i:nil="true" />
+                  <ExpectedReports />
+                  <ExpectedScript>out NonCatIndLosses[source, peril, lob, loss][{ "Source1" }, { "peril1" }, { "lob1" }, 3] = { { { { 140000.0, 1000000.0, 0.0} } } };
+out NonCatIndReinstatement[source, peril, lob, loss][{ "Source1" }, { "peril1" }, { "lob1" }, 3] = { { { { 12280.701754386, 87719.298245614, 0.0} } } };
+out Premium[peril, lob][{ "peril1" }, { "lob1" }] = { { 100000.0} };</ExpectedScript>
+                  <FullNodeName i:nil="true" />
+                  <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+                  <InputNodeSettings i:nil="true" />
+                  <InputScript>out CedantNonCatIndLosses[source,peril,lob,loss][{"Source1"},{"peril1"},{"lob1"},3]={{{{150000.00,2500000.00,0}}}};
+out CoveredLOBs ="lob1";
+out Limit=1e6;
+out Retention=1e4;
+out Reinstatements="1@100%";
+out UpfrontPremium=1e5;
+</InputScript>
+                  <TestName>WithReinstatement</TestName>
+                  <TestNodeSettings>
+                    <NumScenarios>5</NumScenarios>
+                    <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+                    <RandomSeed>749216459</RandomSeed>
+                  </TestNodeSettings>
+                  <Tolerance>1E-08</Tolerance>
+                  <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+                  <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+                  <UseInputNodeSettings>false</UseInputNodeSettings>
+                </NodeTest>
+                <NodeTest>
+                  <AssertionsScript></AssertionsScript>
+                  <ExpectedNodeSettings i:nil="true" />
+                  <ExpectedReports />
+                  <ExpectedScript>out NonCatIndLosses[source, peril, lob, loss][{ "Source1" }, { "peril1" }, { "lob1" }, 3] = { { { { 140000.0, 1000000.0, 0.0} } } };
+out NonCatIndReinstatement[source, peril, lob, loss][{ "Source1" }, { "peril1" }, { "lob1" }, 3] = { { { { 12280.701754386/2, 87719.298245614/2, 0.0/2} } } };
+out Premium[peril, lob][{ "peril1" }, { "lob1" }] = { { 100000.0} };</ExpectedScript>
+                  <FullNodeName i:nil="true" />
+                  <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+                  <InputNodeSettings i:nil="true" />
+                  <InputScript>out CedantNonCatIndLosses[source,peril,lob,loss][{"Source1"},{"peril1"},{"lob1"},3]={{{{150000.00,2500000.00,0}}}};
+out CoveredLOBs ="lob1";
+out Limit=1e6;
+out Retention=1e4;
+out Reinstatements="1@50%";
+out UpfrontPremium=1e5;
+</InputScript>
+                  <TestName>TestReinsCost</TestName>
+                  <TestNodeSettings>
+                    <NumScenarios>5</NumScenarios>
+                    <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+                    <RandomSeed>749216459</RandomSeed>
+                  </TestNodeSettings>
+                  <Tolerance>1E-08</Tolerance>
+                  <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+                  <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+                  <UseInputNodeSettings>false</UseInputNodeSettings>
+                </NodeTest>
+                <NodeTest>
+                  <AssertionsScript></AssertionsScript>
+                  <ExpectedNodeSettings i:nil="true" />
+                  <ExpectedReports />
+                  <ExpectedScript>out NonCatIndLosses[source, peril, lob, loss][{ "Source1" }, { "peril1" }, { "lob1" }, 3] = { { { { 1000000.0, 1000000.0, 900000.0} } } };
+out NonCatIndReinstatement[source, peril, lob, loss][{ "Source1" }, { "peril1" }, { "lob1" }, 3] = { { { { 1e5,1e5,9e4} } } };
+out Premium[peril, lob][{ "peril1" }, { "lob1" }] = { { 100000.0} };</ExpectedScript>
+                  <FullNodeName i:nil="true" />
+                  <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+                  <InputNodeSettings i:nil="true" />
+                  <InputScript>out CedantNonCatIndLosses[source,peril,lob,loss][{"Source1"},{"peril1"},{"lob1"},3]={{{{1500000.00,2500000.00,900000.00}}}};
+out CoveredLOBs ="lob1";
+out Limit=1e6;
+out Retention=0;
+out Reinstatements="1@100%, 1@100%, 1@100%";
+out UpfrontPremium=1e5;
+</InputScript>
+                  <TestName>TestMultipleReinstatements</TestName>
+                  <TestNodeSettings>
+                    <NumScenarios>5</NumScenarios>
+                    <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+                    <RandomSeed>749216459</RandomSeed>
+                  </TestNodeSettings>
+                  <Tolerance>1E-08</Tolerance>
+                  <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+                  <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+                  <UseInputNodeSettings>false</UseInputNodeSettings>
+                </NodeTest>
+              </ArrayOfNodeTest>
+            </Entry>
+          </fAttachedData>
+          <NodeType>Operation</NodeType>
+          <Name>Apply Non Cat XL</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text>
+arg CedantNonCatIndLosses = Cedant.NonCatIndLosses;
+
+// filter losses for covered LOB
+arg CoveredLOBs = 'Run Details'.CoveredLOBs;
+CoveredLOBs_Vector[lob][StringTrimStart(StringSplit(CoveredLOBs,","))] = lob;
+CoveredLosses =
+		CedantNonCatIndLosses[:,:,CoveredLOBs_Vector,default::DummyLoss];
+
+// apply limit and retention on event losses
+arg Limit = 'Run Details'.Limit;
+arg Retention = 'Run Details'.Retention;
+EventLossesInTranche = Min( Limit, Max( 0, CoveredLosses - Retention ) );
+
+// process reinstatement details to get number of reinstatements and cost of reinstatements
+arg Reinstatements = 'Run Details'.Reinstatements;
+arg UpfrontPremium = 'Run Details'.UpfrontPremium;
+
+SplitReinstatementDetails1 = StringTrimStart( StringSplit( Reinstatements, "," ) );
+SplitReinstatementDetails2[order][Length(SplitReinstatementDetails1)] = StringSplit( SplitReinstatementDetails1[order], "@" );
+AllowedReinstatement = ToInteger( SplitReinstatementDetails2[:,0] );
+CumulativeAllowedReinstatement = Accumulate( AllowedReinstatement );
+ReinstatementCost = ToDouble( StringSubString( SplitReinstatementDetails2[:,1], 0, StringLength( SplitReinstatementDetails2[:,1] ) - 1) ) / 100 * UpfrontPremium;
+
+// apply reinstatement impact
+TotalLossesToLimitRatio = if Limit == 0 then 0 else Sum[sims,mbla]( EventLossesInTranche / Limit );
+AllowedLossesRatio =
+		if TotalLossesToLimitRatio == 0 then 0
+		else
+				( Min(
+						TotalLossesToLimitRatio,
+						Sum( AllowedReinstatement ) + 1 ) / TotalLossesToLimitRatio );
+
+TotalUtilisedReinstatement =
+		Min(
+				TotalLossesToLimitRatio,
+				Sum( AllowedReinstatement ) );
+TotalReinstatementCost =
+		Sum[order,mind](
+				Dissipate[order,mind](
+						Min( TotalUtilisedReinstatement,
+									CumulativeAllowedReinstatement ) )
+				* ReinstatementCost );
+
+// determine event recovery ratio and apply on covered losses
+out NonCatIndLosses =
+		if CoveredLosses == 0 then CoveredLosses else ( AllowedLossesRatio * EventLossesInTranche );
+
+// allocate event reinstatement cost proportionally across peril and LOB
+TotalNonCatLosses = Sum[sims,mbla]( NonCatIndLosses );
+out NonCatIndReinstatement =
+		( if TotalNonCatLosses == 0 then 0 else ( TotalReinstatementCost / TotalNonCatLosses ) )
+		* NonCatIndLosses;
+
+// allocate upfront premium to perils and LOBs proportional to mean covered cat losses
+MeanNonCatLossesByPerilLoB = Mean[sims,mind]( Sum[peril,lob,sims,mbla]( NonCatIndLosses ) );
+out Premium =
+		if Sum( MeanNonCatLossesByPerilLoB ) == 0 then
+				PadToPattern( ( UpfrontPremium / Count( MeanNonCatLossesByPerilLoB ) ), MeanNonCatLossesByPerilLoB, 0 )
+		else
+				( ( UpfrontPremium / Sum( MeanNonCatLossesByPerilLoB ) ) * MeanNonCatLossesByPerilLoB );
+
+//Commission
+arg inCommission = 'Run Details'.Commission;
+out Commission= inCommission * Premium;
+
+//Fixed Expenses
+arg inFixedExpenses = 'Run Details'.FixedExpenses;
+out FixedExpenses = 
+		if Sum( MeanNonCatLossesByPerilLoB ) == 0 then
+				PadToPattern( ( inFixedExpenses / Count( MeanNonCatLossesByPerilLoB ) ), MeanNonCatLossesByPerilLoB, 0 )
+		else
+				( ( inFixedExpenses / Sum( MeanNonCatLossesByPerilLoB ) ) * MeanNonCatLossesByPerilLoB );
+
+// dummies
+DummyLoss[loss][0] = 0.0;</Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+            <InputVariables />
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>27569294</RandomSeed>
+          </NestedSettings>
+          <Children />
+          <ChildrenEdges />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeExport">
+          <fAttachedData i:nil="true" />
+          <NodeType>Export</NodeType>
+          <Name>Export</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings i:nil="true" />
+          <Children />
+          <ChildrenEdges />
+          <ExportSettings>
+            <InputVariables>
+              <TycheInputVariable>
+                <VariableName>Premium</VariableName>
+                <AncestorNodeName>Apply Non Cat XL</AncestorNodeName>
+                <AncestorVariableName>Premium</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>NonCatIndLosses</VariableName>
+                <AncestorNodeName>Apply Non Cat XL</AncestorNodeName>
+                <AncestorVariableName>NonCatIndLosses</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>NonCatIndReinstatement</VariableName>
+                <AncestorNodeName>Apply Non Cat XL</AncestorNodeName>
+                <AncestorVariableName>NonCatIndReinstatement</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>Commission</VariableName>
+                <AncestorNodeName>Apply Non Cat XL</AncestorNodeName>
+                <AncestorVariableName>Commission</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>FixedExpenses</VariableName>
+                <AncestorNodeName>Apply Non Cat XL</AncestorNodeName>
+                <AncestorVariableName>FixedExpenses</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+            </InputVariables>
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1243558444</RandomSeed>
+            <FileName></FileName>
+            <RetainOutputVariables>false</RetainOutputVariables>
+          </ExportSettings>
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeExcelImport">
+          <fAttachedData i:nil="true" />
+          <NodeType>ExcelImport</NodeType>
+          <Name>Run Details</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings i:nil="true" />
+          <Children />
+          <ChildrenEdges />
+          <ExcelImportSettings>
+            <InputVariables i:nil="true" />
+            <OutputVariables i:nil="true" />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>360685263</RandomSeed>
+            <ExcelFileName>.\Apply Inwards Contract - Non Cat XL (Proportional)_1.xlsx</ExcelFileName>
+            <ExcelExportVariables />
+            <ExcelImportVariables>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>CoveredLOBs</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>String</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>Limit</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>Retention</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>Reinstatements</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>String</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>UpfrontPremium</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>Commission</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName>Sheet1</SheetName>
+                <CellsRange>A1</CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>FixedExpenses</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName>Sheet1</SheetName>
+                <CellsRange>A1</CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+            </ExcelImportVariables>
+            <ExcelComplexImportVariables />
+            <RecalculateAfterExport>true</RecalculateAfterExport>
+          </ExcelImportSettings>
+        </TycheNode>
+      </TopLevelModelNodes>
+      <TopLevelModelEdges>
+        <TycheEdge>
+          <SourceNodeFullName>Cedant</SourceNodeFullName>
+          <SinkNodeFullName>Apply Non Cat XL</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Apply Non Cat XL</SourceNodeFullName>
+          <SinkNodeFullName>Export</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Run Details</SourceNodeFullName>
+          <SinkNodeFullName>Apply Non Cat XL</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Cedant</SourceNodeFullName>
+          <SinkNodeFullName>Export</SinkNodeFullName>
+        </TycheEdge>
+      </TopLevelModelEdges>
+    </TycheEngine>
+  </TycheProjectEngineContents>
+  <TycheProjectGUIContents>
+    <TycheModel xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+      <FileVersion>1</FileVersion>
+      <TopLevelGuiNodes>
+        <TycheGuiNode>
+          <Name>Cedant</Name>
+          <ElementLeft>426</ElementLeft>
+          <ElementTop>87</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>135</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Apply Non Cat XL</Name>
+          <ElementLeft>238</ElementLeft>
+          <ElementTop>338</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>90</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Export</Name>
+          <ElementLeft>238</ElementLeft>
+          <ElementTop>545</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>135</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Run Details</Name>
+          <ElementLeft>92</ElementLeft>
+          <ElementTop>87</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>135</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+      </TopLevelGuiNodes>
+      <DebuggingSettings i:nil="true" />
+      <DefaultGridCellFormat i:nil="true" />
+      <ModelInspectionSettings i:nil="true" />
+    </TycheModel>
+  </TycheProjectGUIContents>
+</TycheProject>

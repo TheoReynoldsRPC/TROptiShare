@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheGuiNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>InverseGaussianDotCDF</Name>
+  <ElementLeft>541</ElementLeft>
+  <ElementTop>416</ElementTop>
+  <ElementWidth>250</ElementWidth>
+  <ElementHeight>90</ElementHeight>
+  <Children />
+  <VisualNodeSettings>
+    <ShowIcon>true</ShowIcon>
+    <ShowTitle>true</ShowTitle>
+    <ShowBorder>true</ShowBorder>
+    <ShowBackground>true</ShowBackground>
+    <IconString></IconString>
+    <TitleLocation>Embed</TitleLocation>
+    <TitleColourString>#FF000000</TitleColourString>
+    <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+    <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+    <BorderColourString>#FF800080</BorderColourString>
+    <IsIconStandardSize>true</IsIconStandardSize>
+    <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+    <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+    <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+    <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+    <FloatingTitleWidth>120</FloatingTitleWidth>
+    <FloatingTitleHeight>40</FloatingTitleHeight>
+  </VisualNodeSettings>
+  <OutliningStatus />
+  <IsBackwardsNode>false</IsBackwardsNode>
+  <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+</TycheGuiNode>

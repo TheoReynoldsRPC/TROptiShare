@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="" i:type="TycheNodeOperation">
+  <fAttachedData i:nil="true" />
+  <NodeType>Operation</NodeType>
+  <Name>InverseGaussianDotCDF</Name>
+  <Description></Description>
+  <Author>Wee Shen Teo (WT02)</Author>
+  <Text>arg Lambda = 1;
+arg Mew = 1;
+arg x = 1;
+
+out CDF_x =
+		Normal.CDF( 0, 1, Sqrt( Lambda / x ) * ( x / Mew - 1 ) )
+		+ Exp( 2 * Lambda / Mew ) * Normal.CDF( 0, 1, - Sqrt( Lambda / x ) * ( x / Mew + 1 ) );</Text>
+  <CacheResultValues>true</CacheResultValues>
+  <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+  <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+  <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+  <NumScenariosDefault>0</NumScenariosDefault>
+  <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+  <Breakpoints />
+  <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+    <InputVariables />
+    <OutputVariables />
+    <IsContainer>false</IsContainer>
+    <RandomSeed>388562295</RandomSeed>
+  </NestedSettings>
+  <Children />
+  <ChildrenEdges />
+</TycheNode>

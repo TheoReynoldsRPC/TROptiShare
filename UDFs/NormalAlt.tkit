@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="" i:type="TycheNodeContainer">
+  <fAttachedData i:nil="true" />
+  <NodeType>Container</NodeType>
+  <Name>NormalAlt</Name>
+  <Description></Description>
+  <Author>Wee Shen Teo (WT02)</Author>
+  <Text>μμ</Text>
+  <CacheResultValues>true</CacheResultValues>
+  <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+  <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+  <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+  <NumScenariosDefault>0</NumScenariosDefault>
+  <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+  <Breakpoints />
+  <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+    <InputVariables>
+      <TycheInputVariable>
+        <VariableName>Mew</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName></AncestorVariableName>
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>Sigma</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName></AncestorVariableName>
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>NumScenariosRequired</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName></AncestorVariableName>
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+    </InputVariables>
+    <OutputVariables>
+      <TycheOutputVariable>
+        <VariableName>Results</VariableName>
+        <ChildNodeName>Generate Normal</ChildNodeName>
+        <ChildVariableName>Results</ChildVariableName>
+        <CachedTypeData i:nil="true" />
+        <IsEnabled>true</IsEnabled>
+      </TycheOutputVariable>
+    </OutputVariables>
+    <IsContainer>true</IsContainer>
+    <RandomSeed>1328612099</RandomSeed>
+  </NestedSettings>
+  <Children>
+    <TycheNode xmlns="" i:type="TycheNodeNestedInputs">
+      <fAttachedData i:nil="true" />
+      <NodeType>NestedInputs</NodeType>
+      <Name>Inputs</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text></Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+    </TycheNode>
+    <TycheNode xmlns="" i:type="TycheNodeNestedOutputs">
+      <fAttachedData i:nil="true" />
+      <NodeType>NestedOutputs</NodeType>
+      <Name>Outputs</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text></Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+    </TycheNode>
+    <TycheNode xmlns="" i:type="TycheNodeOperation">
+      <fAttachedData i:nil="true" />
+      <NodeType>Operation</NodeType>
+      <Name>Generate Normal</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text>arg Mew = Inputs.Mew;
+arg Sigma = Inputs.Sigma;
+arg NumScenariosRequired = Inputs.NumScenariosRequired;
+
+out Results = Normal( Mew, Sigma );</Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>FromAncestorVariable</NumScenariosSourceType>
+      <NumScenariosSourceNodeName>Inputs</NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName>NumScenariosRequired</NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+      <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+        <InputVariables />
+        <OutputVariables />
+        <IsContainer>false</IsContainer>
+        <RandomSeed>1122840626</RandomSeed>
+      </NestedSettings>
+      <Children />
+      <ChildrenEdges />
+    </TycheNode>
+  </Children>
+  <ChildrenEdges>
+    <TycheEdge>
+      <SourceNodeFullName>NormalAlt\Inputs</SourceNodeFullName>
+      <SinkNodeFullName>NormalAlt\Generate Normal</SinkNodeFullName>
+    </TycheEdge>
+    <TycheEdge>
+      <SourceNodeFullName>NormalAlt\Generate Normal</SourceNodeFullName>
+      <SinkNodeFullName>NormalAlt\Outputs</SinkNodeFullName>
+    </TycheEdge>
+  </ChildrenEdges>
+</TycheNode>

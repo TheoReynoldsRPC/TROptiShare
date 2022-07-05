@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="" i:type="TycheNodeCSharp">
+  <fAttachedData i:nil="true" />
+  <NodeType>CSharp</NodeType>
+  <Name>StochasticLookup</Name>
+  <Description></Description>
+  <Author>Chris Linley (cl04)</Author>
+  <Text></Text>
+  <CacheResultValues>true</CacheResultValues>
+  <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+  <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+  <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+  <NumScenariosDefault>0</NumScenariosDefault>
+  <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+  <Breakpoints />
+  <CSharpSettings>
+    <FullProjectPath>.\StochasticLookup_Files\StochasticLookup.csproj</FullProjectPath>
+    <FullDLLPath></FullDLLPath>
+    <OperationName>StochasticLookup.StochasticLookup</OperationName>
+    <DisplayUIElement>false</DisplayUIElement>
+    <InputVariables>
+      <TycheInputVariable>
+        <VariableName>labels</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName i:nil="true" />
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>values</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName i:nil="true" />
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>defaultValue</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName i:nil="true" />
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+    </InputVariables>
+    <Data i:nil="true" />
+    <OutputVariables>
+      <TycheOutputVariable>
+        <VariableName>result</VariableName>
+        <ChildNodeName></ChildNodeName>
+        <ChildVariableName></ChildVariableName>
+        <CachedTypeData i:nil="true" />
+        <IsEnabled>true</IsEnabled>
+      </TycheOutputVariable>
+    </OutputVariables>
+    <DebugOption>Full</DebugOption>
+    <BuildMode>Release</BuildMode>
+  </CSharpSettings>
+</TycheNode>

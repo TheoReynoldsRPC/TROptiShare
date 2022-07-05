@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="" i:type="TycheNodeOperation">
+  <fAttachedData>
+    <Entry Label="Node_Tests" ContentType="CollectionOfNodeTest">
+      <ArrayOfNodeTest xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <NodeTest>
+          <AssertionsScript></AssertionsScript>
+          <ExpectedNodeSettings i:nil="true" />
+          <ExpectedReports />
+          <ExpectedScript>Inds[i][3]="i"+i;
+out LinearCorr[Dim1,Dim2][Inds,Inds]={{1.0,1,0.5},{1,1,0.5},{0.5,0.5,1}};</ExpectedScript>
+          <FullNodeName i:nil="true" />
+          <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+          <InputNodeSettings i:nil="true" />
+          <InputScript>Inds[i][3]="i"+i;
+out x[i][Inds]={&lt;&lt;100,200,300&gt;&gt;,&lt;&lt;200,400,600&gt;&gt;,&lt;&lt;200,100,300&gt;&gt;};</InputScript>
+          <TestName>CovarianceMatrix_Test</TestName>
+          <TestNodeSettings>
+            <NumScenarios>5</NumScenarios>
+            <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+            <RandomSeed>749216459</RandomSeed>
+          </TestNodeSettings>
+          <Tolerance>1E-08</Tolerance>
+          <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+          <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+          <UseInputNodeSettings>false</UseInputNodeSettings>
+        </NodeTest>
+      </ArrayOfNodeTest>
+    </Entry>
+  </fAttachedData>
+  <NodeType>Operation</NodeType>
+  <Name>CovarianceMatrix</Name>
+  <Description></Description>
+  <Author>James Norman (JN02)</Author>
+  <Text>//Calculate a linear correlation matrix of a one dimensional indexed array
+arg x = 1;
+//Error checks
+CheckDimensionName=if DimensionNames(x)[0]=="xx1" then  ReportError("Input dimension name must not be xx1") else False;
+//Change the dimension name to be something rare
+y=Reindex(x,"xx1");
+//Calculate mean and SD
+EX=Mean[xx1](y);
+MeanShiftX=X-EX;
+//Calculate the lower half of the matrix;
+Index[xx1][IteratorSize(x)]=IntegerIndex(IteratorSize(x),xx1);
+InnerDimension[xx1,xx2][IteratorSize(x),Take(IteratorSize(X),Index[xx1])]=xx2;
+LowerMatrix[xx1][IteratorSize(x)]=Mean[sims,mind](MeanShiftX[Index[xx1]]*MeanShiftX[InnerDimension[xx1]]);
+//Construct the full matrix
+Diagonal[xx1,xx2][IteratorSize(x),{xx1}]= Mean[sims,mind](MeanShiftX[Index[xx1]]^2);
+UpperMatrix=Reindex(Transpose[xx2,xx1](LowerMatrix),"xx1","xx2");
+
+out CovarMat =Reindex(Sum[0,mind]({LowerMatrix,Diagonal,UpperMatrix}),"i1","i2");</Text>
+  <CacheResultValues>true</CacheResultValues>
+  <NumScenariosSourceType>FromParent</NumScenariosSourceType>
+  <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+  <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+  <NumScenariosDefault>0</NumScenariosDefault>
+  <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+  <Breakpoints />
+  <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+    <InputVariables />
+    <OutputVariables />
+    <IsContainer>false</IsContainer>
+    <RandomSeed>1070132964</RandomSeed>
+  </NestedSettings>
+  <Children />
+  <ChildrenEdges />
+</TycheNode>

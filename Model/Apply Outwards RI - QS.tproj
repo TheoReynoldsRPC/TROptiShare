@@ -1,0 +1,1268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheProject xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <TycheProjectFileVersion>2</TycheProjectFileVersion>
+  <TycheVersion>211.0.1.21203</TycheVersion>
+  <IsAuditingEnabled>false</IsAuditingEnabled>
+  <TycheProjectEngineContents>
+    <TycheEngine xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+      <FileVersion>1</FileVersion>
+      <LastLoadedEngineVersion>
+        <BuildNumber>0</BuildNumber>
+        <MajorVersionNumber>0</MajorVersionNumber>
+        <MinorVersionNumber>0</MinorVersionNumber>
+        <PatchNumber>0</PatchNumber>
+      </LastLoadedEngineVersion>
+      <Globals>
+        <ScenarioCount>10000</ScenarioCount>
+        <RandomSeed>749216459</RandomSeed>
+        <UsePerNodeSeeding>true</UsePerNodeSeeding>
+        <AutomaticClearResults>false</AutomaticClearResults>
+        <AutomaticFreeMemory>false</AutomaticFreeMemory>
+        <SparseVectorThreshold>0.01</SparseVectorThreshold>
+        <SIMDGlobalNumThreads>-1</SIMDGlobalNumThreads>
+        <ModelDescription></ModelDescription>
+        <ManagedGlobalNumThreads>1</ManagedGlobalNumThreads>
+        <UseDependencyGroups>true</UseDependencyGroups>
+        <CheckIndexingVariables>false</CheckIndexingVariables>
+        <CheckVariablesAndTypes>false</CheckVariablesAndTypes>
+        <FatalReportLevel>None</FatalReportLevel>
+        <IssueWarningForExperimentalFeatures>true</IssueWarningForExperimentalFeatures>
+        <CheckDimensionNames>None</CheckDimensionNames>
+        <CheckNonDistributedFunctions>None</CheckNonDistributedFunctions>
+        <ToolkitRequirements />
+      </Globals>
+      <TopLevelModelNodes>
+        <TycheNode xmlns="" i:type="TycheNodeImport">
+          <fAttachedData i:nil="true" />
+          <NodeType>Import</NodeType>
+          <Name>Import</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings i:nil="true" />
+          <Children />
+          <ChildrenEdges />
+          <ImportSettings>
+            <InputVariables />
+            <OutputVariables>
+              <TycheOutputVariable>
+                <VariableName>Premium</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>ent</Name>
+                        <IndexingVariableDetails>
+                          <Name>i1</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>peril</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>lob</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>InwardsID</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+              <TycheOutputVariable>
+                <VariableName>CatAggLosses</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>ent</Name>
+                        <IndexingVariableDetails>
+                          <Name>i1</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>peril</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>lob</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>InwardsID</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+              <TycheOutputVariable>
+                <VariableName>CatAggReinstatement</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>ent</Name>
+                        <IndexingVariableDetails>
+                          <Name>i1</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>peril</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>lob</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>InwardsID</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+              <TycheOutputVariable>
+                <VariableName>CatIndLosses</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>ent</Name>
+                        <IndexingVariableDetails>
+                          <Name>i1</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>source</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>loss</Name>
+                        <IndexingVariableDetails i:nil="true" />
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>peril</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>lob</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>InwardsID</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+              <TycheOutputVariable>
+                <VariableName>CatIndReinstatement</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>ent</Name>
+                        <IndexingVariableDetails>
+                          <Name>i1</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>source</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>loss</Name>
+                        <IndexingVariableDetails i:nil="true" />
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>peril</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>lob</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>InwardsID</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+              <TycheOutputVariable>
+                <VariableName>NonCatAggLosses</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>ent</Name>
+                        <IndexingVariableDetails>
+                          <Name>i</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>peril</Name>
+                        <IndexingVariableDetails>
+                          <Name>i</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>lob</Name>
+                        <IndexingVariableDetails>
+                          <Name>Part</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>InwardsID</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+              <TycheOutputVariable>
+                <VariableName>NonCatIndLosses</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>ent</Name>
+                        <IndexingVariableDetails>
+                          <Name>i1</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>source</Name>
+                        <IndexingVariableDetails>
+                          <Name>i1</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>peril</Name>
+                        <IndexingVariableDetails>
+                          <Name>i</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>lob</Name>
+                        <IndexingVariableDetails>
+                          <Name>Part</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>loss</Name>
+                        <IndexingVariableDetails i:nil="true" />
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>InwardsID</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+              <TycheOutputVariable>
+                <VariableName>NonCatIndReinstatement</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData>
+                  <fDimensionIndex i:nil="true" />
+                  <fDimensionName i:nil="true" />
+                  <DataType>Double</DataType>
+                  <DimensionDetails>
+                    <fIsKnown>true</fIsKnown>
+                    <fSingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>ent</Name>
+                        <IndexingVariableDetails>
+                          <Name>i1</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>source</Name>
+                        <IndexingVariableDetails>
+                          <Name>i1</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>peril</Name>
+                        <IndexingVariableDetails>
+                          <Name>i</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>lob</Name>
+                        <IndexingVariableDetails>
+                          <Name>Part</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>loss</Name>
+                        <IndexingVariableDetails i:nil="true" />
+                      </SingleDimensionDetails>
+                      <SingleDimensionDetails>
+                        <Name>InwardsID</Name>
+                        <IndexingVariableDetails>
+                          <Name>index</Name>
+                          <IndexingVariableDetails i:nil="true" />
+                        </IndexingVariableDetails>
+                      </SingleDimensionDetails>
+                    </fSingleDimensionDetails>
+                  </DimensionDetails>
+                </CachedTypeData>
+                <IsEnabled>true</IsEnabled>
+              </TycheOutputVariable>
+            </OutputVariables>
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1135072215</RandomSeed>
+            <FileName></FileName>
+            <RetainOutputVariables>false</RetainOutputVariables>
+          </ImportSettings>
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeOperation">
+          <fAttachedData>
+            <Entry Label="Node_Tests" ContentType="CollectionOfNodeTest">
+              <ArrayOfNodeTest xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <NodeTest>
+                  <AssertionsScript></AssertionsScript>
+                  <ExpectedNodeSettings i:nil="true" />
+                  <ExpectedReports />
+                  <ExpectedScript>out RICatAggRecovery[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 10000000.0000000000000000 } } } };
+out RICatAggReinstatement[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 0.0900000000000000 } } } };
+out RICatIndRecovery[ent, source, loss, peril, lob, InwardsID][{ "UK" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 100000.0000000000000000 } } }, { { { 200000.0000000000000000 } } }, { { { 350000.0000000000000000 } } } } } };
+out RICatIndReinstatement[ent, source, loss, peril, lob, InwardsID][{ "UK" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 0.0600000000000000 } } }, { { { 0.0500000000000000 } } }, { { { 0.0700000000000000 } } } } } };
+out RINonCatAggRecovery[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 33300.0000000000000000 } } } };
+out RINonCatIndRecovery[ent, source, peril, lob, loss, InwardsID][{ "UK" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 300000.0000000000000000 }, { 55000.0000000000000000 }, { 110020.0000000000000000 } } } } } };
+out RINonCatIndReinstatement[ent, source, peril, lob, loss, InwardsID][{ "UK" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 0.0200000000000000 }, { 0.0350000000000000 }, { 0.0450000000000000 } } } } } };
+out RIPremium[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 900.0000000000000000 } } } };
+</ExpectedScript>
+                  <FullNodeName i:nil="true" />
+                  <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+                  <InputNodeSettings i:nil="true" />
+                  <InputScript>out Premium[ent,peril,lob,InwardsID][{"UK"},{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{10000}}}};
+out CatAggLosses[ent,peril,lob,InwardsID][{"UK"},{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{100000000}}}};
+out CatAggReinstatement[ent,peril,lob,InwardsID][{"UK"},{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{0.9}}}};;
+out CatIndLosses [ent,source,loss,peril,lob,InwardsID][{"UK"},{"Source1"},3,{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{{{1000000}}},{{{2000000}}},{{{3500000}}}}}};
+out CatIndReinstatement [ent,source,loss,peril,lob,InwardsID][{"UK"},{"Source1"},3,{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{{{0.6}}},{{{0.5}}},{{{0.7}}}}}};
+out NonCatAggLosses [ent,peril,lob,InwardsID][{"UK"},{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{333000}}}};
+out NonCatIndLosses [ent,source,loss,peril,lob,InwardsID][{"UK"},{"Source1"},3,{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{{{3000000}}},{{{550000}}},{{{1100200}}}}}};
+out NonCatIndReinstatement [ent,source,loss,peril,lob,InwardsID][{"UK"},{"Source1"},3,{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{{{0.2}}},{{{0.35}}},{{{0.45}}}}}};
+out CoveredEntities = "UK";
+out CoveredLoBs="lob1";
+out Cession=10%;
+out AggregateLimit=Infinity;
+out OverriderCommission = 0.1;
+</InputScript>
+                  <TestName>SimpleTest</TestName>
+                  <TestNodeSettings>
+                    <NumScenarios>5</NumScenarios>
+                    <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+                    <RandomSeed>749216459</RandomSeed>
+                  </TestNodeSettings>
+                  <Tolerance>1E-08</Tolerance>
+                  <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+                  <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+                  <UseInputNodeSettings>false</UseInputNodeSettings>
+                </NodeTest>
+                <NodeTest>
+                  <AssertionsScript></AssertionsScript>
+                  <ExpectedNodeSettings i:nil="true" />
+                  <ExpectedReports />
+                  <ExpectedScript>out RICatAggRecovery[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 8969961.39328616 } } } };
+out RICatAggReinstatement[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 0.0807296525395755 } } } };
+out RICatIndRecovery[ent, source, loss, peril, lob, InwardsID][{ "UK" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 89699.6139328616 } } }, { { { 179399.227865723 } } }, { { { 313948.648765016 } } } } } };
+out RICatIndReinstatement[ent, source, loss, peril, lob, InwardsID][{ "UK" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 0.0538197683597170 } } }, { { { 0.0448498069664308 } } }, { { { 0.0627897297530031 } } } } } };
+out RINonCatAggRecovery[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 29869.9714396429 } } } };
+out RINonCatIndRecovery[ent, source, peril, lob, loss, InwardsID][{ "UK" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 269098.841798585 }, { 49334.7876630739 }, { 98687.5152489344 } } } } } };
+out RINonCatIndReinstatement[ent, source, peril, lob, loss, InwardsID][{ "UK" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 0.0179399227865723 }, { 0.0313948648765016 }, { 0.0403648262697877 } } } } } };
+out RIPremium[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 9000.0 } } } };
+</ExpectedScript>
+                  <FullNodeName i:nil="true" />
+                  <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+                  <InputNodeSettings i:nil="true" />
+                  <InputScript>out Premium[ent,peril,lob,InwardsID][{"UK"},{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{10000}}}};
+out CatAggLosses[ent,peril,lob,InwardsID][{"UK"},{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{100000000}}}};
+out CatAggReinstatement[ent,peril,lob,InwardsID][{"UK"},{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{0.9}}}};;
+out CatIndLosses [ent,source,loss,peril,lob,InwardsID][{"UK"},{"Source1"},3,{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{{{1000000}}},{{{2000000}}},{{{3500000}}}}}};
+out CatIndReinstatement [ent,source,loss,peril,lob,InwardsID][{"UK"},{"Source1"},3,{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{{{0.6}}},{{{0.5}}},{{{0.7}}}}}};
+out NonCatAggLosses [ent,peril,lob,InwardsID][{"UK"},{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{333000}}}};
+out NonCatIndLosses [ent,source,loss,peril,lob,InwardsID][{"UK"},{"Source1"},3,{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{{{3000000}}},{{{550000}}},{{{1100200}}}}}};
+out NonCatIndReinstatement [ent,source,loss,peril,lob,InwardsID][{"UK"},{"Source1"},3,{"UK_QS"},{"lob1"},{"In_ID_1"}] = {{{{{{0.2}}},{{{0.35}}},{{{0.45}}}}}};
+out CoveredEntities = "UK";
+out CoveredLoBs="lob1";
+out Cession=100%;
+out AggregateLimit=1e7;
+out OverriderCommission = 0.1;
+</InputScript>
+                  <TestName>AggLimit</TestName>
+                  <TestNodeSettings>
+                    <NumScenarios>5</NumScenarios>
+                    <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+                    <RandomSeed>749216459</RandomSeed>
+                  </TestNodeSettings>
+                  <Tolerance>1E-08</Tolerance>
+                  <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+                  <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+                  <UseInputNodeSettings>false</UseInputNodeSettings>
+                </NodeTest>
+              </ArrayOfNodeTest>
+            </Entry>
+          </fAttachedData>
+          <NodeType>Operation</NodeType>
+          <Name>Apply QS</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text>arg Premium = Import.Premium;
+arg CatAggLosses = Import.CatAggLosses;
+arg CatAggReinstatement = Import.CatAggReinstatement;
+arg CatIndLosses = Import.CatIndLosses;
+arg CatIndReinstatement = Import.CatIndReinstatement;
+arg NonCatAggLosses = Import.NonCatAggLosses;
+arg NonCatIndLosses = Import.NonCatIndLosses;
+arg NonCatIndReinstatement = Import.NonCatIndReinstatement;
+
+// trim for covered Entities, LoBs, Perils
+arg CoveredEntities = 'Run Details'.CoveredEntities;
+CoveredEntities_Vector[ent][StringSplit(CoveredEntities,", ")] = ent;
+
+arg CoveredLoBs = 'Run Details'.CoveredLoBs;
+CoveredLOBs_Vector[lob][StringSplit(CoveredLOBs,", ")] = lob;
+
+Entities[ent][SetsIntersection(CoveredEntities_Vector,IteratorSize(Premium))] = ent;
+Perils[ent,peril][Entities,IteratorSize(Premium[ent])] = peril;
+LoBs[ent,peril,lob][Entities,Perils[ent],SetsIntersection(CoveredLOBs_Vector,IteratorSize(Premium[ent,peril]))] = lob;
+
+CoveredPremium = Premium[Entities,Perils,LoBs];
+CoveredCatAggLosses = CatAggLosses[Entities,Perils,LoBs,default::DummyInwardsID];
+CoveredCatAggReinstatement = CatAggReinstatement[Entities,Perils,LoBs,default::DummyInwardsID];
+CoveredCatIndLosses = Transpose[ent,source,loss,peril,lob,InwardsID]( Transpose[ent,peril,lob,source,loss,InwardsID]( CatIndLosses )[Entities,Perils,LoBs,default::DummySourceLossInwardsID] );
+CoveredCatIndReinstatement = Transpose[ent,source,loss,peril,lob,InwardsID]( Transpose[ent,peril,lob,source,loss,InwardsID]( CatIndReinstatement )[Entities,Perils,LoBs,default::DummySourceLossInwardsID] );
+CoveredNonCatAggLosses = NonCatAggLosses[Entities,Perils,LoBs,default::DummyInwardsID];
+CoveredNonCatIndLosses = Transpose[ent,source,peril,lob,loss,InwardsID]( Transpose[ent,peril,lob,source,loss,InwardsID]( NonCatIndLosses )[Entities,Perils,LoBs,default::DummySourceLossInwardsID] );
+CoveredNonCatIndReinstatement = Transpose[ent,source,peril,lob,loss,InwardsID]( Transpose[ent,peril,lob,source,loss,InwardsID]( NonCatIndReinstatement )[Entities,Perils,LoBs,default::DummySourceLossInwardsID] );
+
+CoveredLosses =
+		Sum[sims,mbla]( CoveredCatAggLosses )
+		+ Sum[sims,mbla]( CoveredCatIndLosses )
+		+ Sum[sims,mbla]( CoveredNonCatAggLosses )
+		+ Sum[sims,mbla]( CoveredNonCatIndLosses );
+
+// apply cession
+arg Cession = 'Run Details'.Cession;
+
+CededCatAggLosses = Cession * CoveredCatAggLosses;
+CededCatIndLosses = Cession * CoveredCatIndLosses;
+CededNonCatAggLosses = Cession * CoveredNonCatAggLosses;
+CededNonCatIndLosses = Cession * CoveredNonCatIndLosses;
+
+// apply aggregate limit
+arg AggregateLimit = 'Run Details'.AggregateLimit;
+
+AggCededLosses =
+		Sum[sims,mbla]( CededCatAggLosses )
+		+ Sum[sims,mbla]( CededCatIndLosses )
+		+ Sum[sims,mbla]( CededNonCatAggLosses )
+		+ Sum[sims,mbla]( CededNonCatIndLosses );
+
+CededLR = If Sum[sims,mbla](CoveredPremium) == 0 Then 0 Else CoveredLosses / Sum[sims,mbla](CoveredPremium);
+
+AggLimitScaleDownRatio = if CededLR == 0 then 1 else ( Min( CededLR, AggregateLimit ) / CededLR );
+
+out RICatAggRecovery = AggLimitScaleDownRatio * CededCatAggLosses;
+out RICatAggReinstatement = ( AggLimitScaleDownRatio * Cession ) * CoveredCatAggReinstatement;
+out RICatIndRecovery = AggLimitScaleDownRatio * CededCatIndLosses;
+out RICatIndReinstatement = ( AggLimitScaleDownRatio * Cession ) * CoveredCatIndReinstatement;
+out RINonCatAggRecovery = AggLimitScaleDownRatio * CededNonCatAggLosses;
+out RINonCatIndRecovery = AggLimitScaleDownRatio * CededNonCatIndLosses;
+out RINonCatIndReinstatement = ( AggLimitScaleDownRatio * Cession ) * CoveredNonCatIndReinstatement;
+
+// apply commissions
+arg MaxCommission = 'Run Details'.MaxCommission;
+arg ProvCommission = 'Run Details'.ProvCommission;
+arg MinCommission = 'Run Details'.MinCommission;
+
+//arg OverriderCommission = 'Run Details'.OverriderCommission;
+SplitCommDetails1[i][3] = {StringTrimStart( StringSplit( MinCommission, "," ) ),StringTrimStart( StringSplit( ProvCommission , "," ) ), StringTrimStart( StringSplit( MaxCommission, "," ) )};
+SplitCommDetails2[i,order][3,Length(SplitCommDetails1[i])] = StringSplit( SplitCommDetails1[i,order], "@" );
+
+Parameters = Glue(  
+								Flatten(ToDouble( StringSubString( SplitCommDetails2[:,:,1], 0, StringLength( SplitCommDetails2[:,:,1] ) - 1) ) / 100) ,
+								Flatten(ToDouble( StringSubString( SplitCommDetails2[:,:,0], 0, StringLength( SplitCommDetails2[:,:,0] ) - 1) ) / 100 ));
+MaxLossRatio = ToDouble( StringSubString( SplitCommDetails2[0,0,1], 0, StringLength( SplitCommDetails2[0,0,1] ) - 1) ) / 100;
+MinLossRatio = ToDouble( StringSubString( SplitCommDetails2[2,0,1], 0, StringLength( SplitCommDetails2[2,0,1] ) - 1) ) / 100;
+
+LossRatio = Min(MaxLossRatio, Max(MinLossRatio, Min(CededLR,AggregateLimit)));
+InterpolatedCommRate = CurveEvaluateLinearInterpolation(Parameters, LossRatio);
+
+out RIPremium = Cession * CoveredPremium;
+out CedingCommission = InterpolatedCommRate  * Cession * CoveredPremium;
+
+// dummies
+DummyString[i][0] = "";
+DummyInwardsID[InwardsID][DummyString] = 0;
+DummySourceLossInwardsID[source,loss,InwardsID][DummyString,0,DummyString] = 0;</Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+            <InputVariables />
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>424708700</RandomSeed>
+          </NestedSettings>
+          <Children />
+          <ChildrenEdges />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeOperation">
+          <fAttachedData>
+            <Entry Label="Node_Tests" ContentType="CollectionOfNodeTest">
+              <ArrayOfNodeTest xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <NodeTest>
+                  <AssertionsScript></AssertionsScript>
+                  <ExpectedNodeSettings i:nil="true" />
+                  <ExpectedReports />
+                  <ExpectedScript>out RIPremium[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 834.3000000000000000 } } } };
+out RICatAggRecovery[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 9270000.0000000000000000 } } } };
+out RICatAggReinstatement[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 0.0834300000000000 } } } };
+out RICatIndRecovery[ent, source, loss, peril, lob, InwardsID][{ "UK" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 92700.0000000000000000 } } }, { { { 185400.0000000000000000 } } }, { { { 324450.0000000000000000 } } } } } };
+out RICatIndReinstatement[ent, source, loss, peril, lob, InwardsID][{ "UK" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 0.0556200000000000 } } }, { { { 0.0463500000000000 } } }, { { { 0.0648900000000000 } } } } } };
+out RINonCatAggRecovery[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 30869.1000000000000000 } } } };
+out RINonCatIndRecovery[ent, source, peril, lob, loss, InwardsID][{ "UK" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 278100.0000000000000000 }, { 50985.0000000000000000 }, { 101988.5400000000000000 } } } } } };
+out RINonCatIndReinstatement[ent, source, peril, lob, loss, InwardsID][{ "UK" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 0.0185400000000000 }, { 0.0324450000000000 }, { 0.0417150000000000 } } } } } };
+</ExpectedScript>
+                  <FullNodeName i:nil="true" />
+                  <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+                  <InputNodeSettings i:nil="true" />
+                  <InputScript>out FullRICatAggRecovery[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 10000000.0000000000000000 } } } };
+out FullRICatAggReinstatement[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 0.0900000000000000 } } } };
+out FullRICatIndRecovery[ent, source, loss, peril, lob, InwardsID][{ "UK" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 100000.0000000000000000 } } }, { { { 200000.0000000000000000 } } }, { { { 350000.0000000000000000 } } } } } };
+out FullRICatIndReinstatement[ent, source, loss, peril, lob, InwardsID][{ "UK" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 0.0600000000000000 } } }, { { { 0.0500000000000000 } } }, { { { 0.0700000000000000 } } } } } };
+out FullRINonCatAggRecovery[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 33300.0000000000000000 } } } };
+out FullRINonCatIndRecovery[ent, source, peril, lob, loss, InwardsID][{ "UK" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 300000.0000000000000000 }, { 55000.0000000000000000 }, { 110020.0000000000000000 } } } } } };
+out FullRINonCatIndReinstatement[ent, source, peril, lob, loss, InwardsID][{ "UK" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 0.0200000000000000 }, { 0.0350000000000000 }, { 0.0450000000000000 } } } } } };
+out FullRIPremium[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 900.0000000000000000 } } } };
+out InternalPlacement = 0;
+out AssumingEntity = "IRV";
+out ExternalPlacement = 0.927;</InputScript>
+                  <TestName>SimpleTest</TestName>
+                  <TestNodeSettings>
+                    <NumScenarios>5</NumScenarios>
+                    <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+                    <RandomSeed>749216459</RandomSeed>
+                  </TestNodeSettings>
+                  <Tolerance>1E-08</Tolerance>
+                  <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+                  <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+                  <UseInputNodeSettings>false</UseInputNodeSettings>
+                </NodeTest>
+                <NodeTest>
+                  <AssertionsScript></AssertionsScript>
+                  <ExpectedNodeSettings i:nil="true" />
+                  <ExpectedReports />
+                  <ExpectedScript>out RIPremium[ent, peril, lob, InwardsID][{ "UK", "IRV" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 1260.0 } } }, { { { -450.0 } } } };
+out RICatAggRecovery[ent, peril, lob, InwardsID][{ "UK", "IRV" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 14000000.0 } } }, { { { -5000000.0 } } } };
+out RICatAggReinstatement[ent, peril, lob, InwardsID][{ "UK", "IRV" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 0.1260 } } }, { { { -0.045 } } } };
+out RICatIndRecovery[ent, source, loss, peril, lob, InwardsID][{ "UK", "IRV" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 140000.0 } } }, { { { 280000.0 } } }, { { { 490000.0 } } } } }, { { { { { -50000.0 } } }, { { { -100000.0 } } }, { { { -175000.0 } } } } } };
+out RICatIndReinstatement[ent, source, loss, peril, lob, InwardsID][{ "UK", "IRV" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 0.084 } } }, { { { 0.07 } } }, { { { 0.098 } } } } }, { { { { { -0.03 } } }, { { { -0.025 } } }, { { { -0.035 } } } } } };
+out RINonCatAggRecovery[ent, peril, lob, InwardsID][{ "UK", "IRV" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 46620.0 } } }, { { { -16650.0 } } } };
+out RINonCatIndRecovery[ent, source, peril, lob, loss, InwardsID][{ "UK", "IRV" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 420000.0 }, { 77000.0 }, { 154028.0 } } } } }, { { { { { -150000.0 }, { -27500.0 }, { -55010.0 } } } } } };
+out RINonCatIndReinstatement[ent, source, peril, lob, loss, InwardsID][{ "UK", "IRV" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 0.028 }, { 0.049 }, { 0.063 } } } } }, { { { { { -0.010 }, { -0.0175 }, { -0.0225 } } } } } };
+</ExpectedScript>
+                  <FullNodeName i:nil="true" />
+                  <IgnoreUnexpectedReports>false</IgnoreUnexpectedReports>
+                  <InputNodeSettings i:nil="true" />
+                  <InputScript>out FullRICatAggRecovery[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 1e7} } } };
+out FullRICatAggReinstatement[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 0.09 } } } };
+out FullRICatIndRecovery[ent, source, loss, peril, lob, InwardsID][{ "UK" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 1e5 } } }, { { { 2e5 } } }, { { { 3.5e5 } } } } } };
+out FullRICatIndReinstatement[ent, source, loss, peril, lob, InwardsID][{ "UK" }, { "Source1" }, 3, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { { { 0.06 } } }, { { { 0.05 } } }, { { { 0.07 } } } } } };
+out FullRINonCatAggRecovery[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 33300.0 } } } };
+out FullRINonCatIndRecovery[ent, source, peril, lob, loss, InwardsID][{ "UK" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 300000.0 }, { 55000.0 }, { 110020.0 } } } } } };
+out FullRINonCatIndReinstatement[ent, source, peril, lob, loss, InwardsID][{ "UK" }, { "Source1" }, { "UK_QS" }, { "lob1" }, 3, { "In_ID_1" }] = { { { { { { 0.02 }, { 0.035 }, { 0.0450000000000000 } } } } } };
+out FullRIPremium[ent, peril, lob, InwardsID][{ "UK" }, { "UK_QS" }, { "lob1" }, { "In_ID_1" }] = { { { { 900.0 } } } };
+out InternalPlacement = 0.5;
+out AssumingEntity = "IRV";
+out ExternalPlacement = 0.9;</InputScript>
+                  <TestName>TestInternalPlacement</TestName>
+                  <TestNodeSettings>
+                    <NumScenarios>5</NumScenarios>
+                    <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+                    <RandomSeed>749216459</RandomSeed>
+                  </TestNodeSettings>
+                  <Tolerance>1E-08</Tolerance>
+                  <UseAbsoluteDifferences>true</UseAbsoluteDifferences>
+                  <UseExpectedNodeSettings>false</UseExpectedNodeSettings>
+                  <UseInputNodeSettings>false</UseInputNodeSettings>
+                </NodeTest>
+              </ArrayOfNodeTest>
+            </Entry>
+          </fAttachedData>
+          <NodeType>Operation</NodeType>
+          <Name>Apply Placement</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text>arg CedingCommission = 'Apply QS'.CedingCommission;
+arg FullRIPremium = 'Apply QS'.RIPremium;
+arg FullRICatAggRecovery = 'Apply QS'.RICatAggRecovery;
+arg FullRICatAggReinstatement = 'Apply QS'.RICatAggReinstatement;
+arg FullRICatIndRecovery = 'Apply QS'.RICatIndRecovery;
+arg FullRICatIndReinstatement = 'Apply QS'.RICatIndReinstatement;
+arg FullRINonCatAggRecovery = 'Apply QS'.RINonCatAggRecovery;
+arg FullRINonCatIndRecovery = 'Apply QS'.RINonCatIndRecovery;
+arg FullRINonCatIndReinstatement = 'Apply QS'.RINonCatIndReinstatement;
+
+// set up internal transferred amounts for assuming entity (flip signs)
+arg InternalPlacement = 'Run Details'.InternalPlacement;
+arg AssumingEntity = 'Run Details'.AssumingEntity;
+
+AssumingEntityShape[ent][if InternalPlacement == 0 then DummyString else {AssumingEntity}] = 0;
+
+AssumingEntity_CedingCommission[AssumingEntityShape] = Sum[0,mind]( CedingCommission) * -InternalPlacement;
+AssumingEntity_RIPremium[AssumingEntityShape] = Sum[0,mind]( FullRIPremium ) * -InternalPlacement;
+AssumingEntity_RICatAggRecovery[AssumingEntityShape] = Sum[0,mind]( FullRICatAggRecovery ) * -InternalPlacement;
+AssumingEntity_RICatAggReinstatement[AssumingEntityShape] = Sum[0,mind]( FullRICatAggReinstatement ) * -InternalPlacement;
+AssumingEntity_RICatIndRecovery[AssumingEntityShape] = Sum[0,mind]( FullRICatIndRecovery ) * -InternalPlacement;
+AssumingEntity_RICatIndReinstatement[AssumingEntityShape] = Sum[0,mind]( FullRICatIndReinstatement ) * -InternalPlacement;
+AssumingEntity_RINonCatAggRecovery[AssumingEntityShape] = Sum[0,mind]( FullRINonCatAggRecovery ) * -InternalPlacement;
+AssumingEntity_RINonCatIndRecovery[AssumingEntityShape] = Sum[0,mind]( FullRINonCatIndRecovery ) * -InternalPlacement;
+AssumingEntity_RINonCatIndReinstatement[AssumingEntityShape] = Sum[0,mind]( FullRINonCatIndReinstatement ) * -InternalPlacement;
+
+// set up full amounts for ceding entities
+arg ExternalPlacement = 'Run Details'.ExternalPlacement;
+
+TotalPlacement = InternalPlacement + ExternalPlacement;
+
+CedingEntity_CedingCommission = CedingCommission * TotalPlacement;
+CedingEntity_RIPremium = FullRIPremium * TotalPlacement;
+CedingEntity_RICatAggRecovery = FullRICatAggRecovery * TotalPlacement;
+CedingEntity_RICatAggReinstatement = FullRICatAggReinstatement * TotalPlacement;
+CedingEntity_RICatIndRecovery = FullRICatIndRecovery * TotalPlacement;
+CedingEntity_RICatIndReinstatement = FullRICatIndReinstatement * TotalPlacement;
+CedingEntity_RINonCatAggRecovery = FullRINonCatAggRecovery * TotalPlacement;
+CedingEntity_RINonCatIndRecovery = FullRINonCatIndRecovery * TotalPlacement;
+CedingEntity_RINonCatIndReinstatement = FullRINonCatIndReinstatement * TotalPlacement;
+
+// combine ceding and assuming entities
+out CedingCommission = Sum[0,mind]( { CedingEntity_CedingCommission, AssumingEntity_CedingCommission } );
+out RIPremium = Sum[0,mind]( { CedingEntity_RIPremium, AssumingEntity_RIPremium } );
+out RICatAggRecovery = Sum[0,mind]( { CedingEntity_RICatAggRecovery, AssumingEntity_RICatAggRecovery } );
+out RICatAggReinstatement = Sum[0,mind]( { CedingEntity_RICatAggReinstatement, AssumingEntity_RICatAggReinstatement } );
+out RICatIndRecovery = Sum[0,mind]( { CedingEntity_RICatIndRecovery, AssumingEntity_RICatIndRecovery } );
+out RICatIndReinstatement = Sum[0,mind]( { CedingEntity_RICatIndReinstatement, AssumingEntity_RICatIndReinstatement } );
+out RINonCatAggRecovery = Sum[0,mind]( { CedingEntity_RINonCatAggRecovery, AssumingEntity_RINonCatAggRecovery } );
+out RINonCatIndRecovery = Sum[0,mind]( { CedingEntity_RINonCatIndRecovery, AssumingEntity_RINonCatIndRecovery } );
+out RINonCatIndReinstatement = Sum[0,mind]( { CedingEntity_RINonCatIndReinstatement, AssumingEntity_RINonCatIndReinstatement } );
+
+// dummies
+DummyString[i][0] = "";</Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+            <InputVariables />
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1341294044</RandomSeed>
+          </NestedSettings>
+          <Children />
+          <ChildrenEdges />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeExport">
+          <fAttachedData i:nil="true" />
+          <NodeType>Export</NodeType>
+          <Name>Export</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings i:nil="true" />
+          <Children />
+          <ChildrenEdges />
+          <ExportSettings>
+            <InputVariables>
+              <TycheInputVariable>
+                <VariableName>RIPremium</VariableName>
+                <AncestorNodeName>Apply Placement</AncestorNodeName>
+                <AncestorVariableName>RIPremium</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>RICatAggRecovery</VariableName>
+                <AncestorNodeName>Apply Placement</AncestorNodeName>
+                <AncestorVariableName>RICatAggRecovery</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>RICatAggReinstatement</VariableName>
+                <AncestorNodeName>Apply Placement</AncestorNodeName>
+                <AncestorVariableName>RICatAggReinstatement</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>RICatIndRecovery</VariableName>
+                <AncestorNodeName>Apply Placement</AncestorNodeName>
+                <AncestorVariableName>RICatIndRecovery</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>RICatIndReinstatement</VariableName>
+                <AncestorNodeName>Apply Placement</AncestorNodeName>
+                <AncestorVariableName>RICatIndReinstatement</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>RINonCatAggRecovery</VariableName>
+                <AncestorNodeName>Apply Placement</AncestorNodeName>
+                <AncestorVariableName>RINonCatAggRecovery</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>RINonCatIndRecovery</VariableName>
+                <AncestorNodeName>Apply Placement</AncestorNodeName>
+                <AncestorVariableName>RINonCatIndRecovery</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>RINonCatIndReinstatement</VariableName>
+                <AncestorNodeName>Apply Placement</AncestorNodeName>
+                <AncestorVariableName>RINonCatIndReinstatement</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+              <TycheInputVariable>
+                <VariableName>CedingCommission</VariableName>
+                <AncestorNodeName>Apply Placement</AncestorNodeName>
+                <AncestorVariableName>CedingCommission</AncestorVariableName>
+                <IsParallel>false</IsParallel>
+                <IsBranchSelector>false</IsBranchSelector>
+              </TycheInputVariable>
+            </InputVariables>
+            <OutputVariables />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>252326428</RandomSeed>
+            <FileName></FileName>
+            <RetainOutputVariables>false</RetainOutputVariables>
+          </ExportSettings>
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeExcelImport">
+          <fAttachedData i:nil="true" />
+          <NodeType>ExcelImport</NodeType>
+          <Name>Run Details</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+          <NestedSettings i:nil="true" />
+          <Children />
+          <ChildrenEdges />
+          <ExcelImportSettings>
+            <InputVariables i:nil="true" />
+            <OutputVariables i:nil="true" />
+            <IsContainer>false</IsContainer>
+            <RandomSeed>1299118628</RandomSeed>
+            <ExcelFileName>.\Apply Outwards RI - QS_1.xlsx</ExcelFileName>
+            <ExcelExportVariables />
+            <ExcelImportVariables>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>CoveredEntities</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>String</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>CoveredLOBs</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>String</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>Cession</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>AggregateLimit</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>InternalPlacement</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>AssumingEntity</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>String</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>ExternalPlacement</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName></SheetName>
+                <CellsRange></CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>MinCommission</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName>Sheet1</SheetName>
+                <CellsRange>A1</CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>ProvCommission</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName>Sheet1</SheetName>
+                <CellsRange>A1</CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+              <TycheOutputVariable_ExcelImport>
+                <VariableName>MaxCommission</VariableName>
+                <ChildNodeName></ChildNodeName>
+                <ChildVariableName></ChildVariableName>
+                <CachedTypeData i:nil="true" />
+                <IsEnabled>true</IsEnabled>
+                <SheetName>Sheet1</SheetName>
+                <CellsRange>A1</CellsRange>
+                <ImportAsScenarios>false</ImportAsScenarios>
+                <ImportHeaders>None</ImportHeaders>
+                <IsEnabled>true</IsEnabled>
+                <DataType>Double</DataType>
+                <IgnoreEmptyCells>true</IgnoreEmptyCells>
+                <NumDimensions>0</NumDimensions>
+              </TycheOutputVariable_ExcelImport>
+            </ExcelImportVariables>
+            <ExcelComplexImportVariables />
+            <RecalculateAfterExport>true</RecalculateAfterExport>
+          </ExcelImportSettings>
+        </TycheNode>
+      </TopLevelModelNodes>
+      <TopLevelModelEdges>
+        <TycheEdge>
+          <SourceNodeFullName>Import</SourceNodeFullName>
+          <SinkNodeFullName>Apply QS</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Apply QS</SourceNodeFullName>
+          <SinkNodeFullName>Apply Placement</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Apply Placement</SourceNodeFullName>
+          <SinkNodeFullName>Export</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Run Details</SourceNodeFullName>
+          <SinkNodeFullName>Apply QS</SinkNodeFullName>
+        </TycheEdge>
+        <TycheEdge>
+          <SourceNodeFullName>Run Details</SourceNodeFullName>
+          <SinkNodeFullName>Apply Placement</SinkNodeFullName>
+        </TycheEdge>
+      </TopLevelModelEdges>
+    </TycheEngine>
+  </TycheProjectEngineContents>
+  <TycheProjectGUIContents>
+    <TycheModel xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+      <FileVersion>1</FileVersion>
+      <TopLevelGuiNodes>
+        <TycheGuiNode>
+          <Name>Import</Name>
+          <ElementLeft>537</ElementLeft>
+          <ElementTop>95</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>135</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Apply QS</Name>
+          <ElementLeft>308</ElementLeft>
+          <ElementTop>361</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>90</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Apply Placement</Name>
+          <ElementLeft>308</ElementLeft>
+          <ElementTop>582</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>90</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Export</Name>
+          <ElementLeft>308</ElementLeft>
+          <ElementTop>803</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>135</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+        <TycheGuiNode>
+          <Name>Run Details</Name>
+          <ElementLeft>94</ElementLeft>
+          <ElementTop>95</ElementTop>
+          <ElementWidth>250</ElementWidth>
+          <ElementHeight>135</ElementHeight>
+          <Children />
+          <VisualNodeSettings>
+            <ShowIcon>true</ShowIcon>
+            <ShowTitle>true</ShowTitle>
+            <ShowBorder>true</ShowBorder>
+            <ShowBackground>true</ShowBackground>
+            <IconString></IconString>
+            <TitleLocation>Embed</TitleLocation>
+            <TitleColourString>#FF000000</TitleColourString>
+            <BackgroundColour1String>#FFFAFBE9</BackgroundColour1String>
+            <BackgroundColour2String>#FFFFD700</BackgroundColour2String>
+            <BorderColourString>#FF800080</BorderColourString>
+            <IsIconStandardSize>true</IsIconStandardSize>
+            <FloatingTitleBackgroundColourString>#FFFFFFFF</FloatingTitleBackgroundColourString>
+            <FloatingTitleBorderColourString>#FF800080</FloatingTitleBorderColourString>
+            <FloatingTitleOffsetX>0</FloatingTitleOffsetX>
+            <FloatingTitleOffsetY>0</FloatingTitleOffsetY>
+            <FloatingTitleWidth>120</FloatingTitleWidth>
+            <FloatingTitleHeight>40</FloatingTitleHeight>
+          </VisualNodeSettings>
+          <OutliningStatus />
+          <IsBackwardsNode>false</IsBackwardsNode>
+          <ExcludeFromModelInspection>false</ExcludeFromModelInspection>
+        </TycheGuiNode>
+      </TopLevelGuiNodes>
+      <DebuggingSettings i:nil="true" />
+      <DefaultGridCellFormat i:nil="true" />
+      <ModelInspectionSettings i:nil="true" />
+    </TycheModel>
+  </TycheProjectGUIContents>
+</TycheProject>

@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="" i:type="TycheNodeContainer">
+  <fAttachedData i:nil="true" />
+  <NodeType>Container</NodeType>
+  <Name>InverseGaussianDotCDFInverse</Name>
+  <Description></Description>
+  <Author>Wee Shen Teo (WT02)</Author>
+  <Text></Text>
+  <CacheResultValues>true</CacheResultValues>
+  <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+  <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+  <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+  <NumScenariosDefault>0</NumScenariosDefault>
+  <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+  <Breakpoints />
+  <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+    <InputVariables>
+      <TycheInputVariable>
+        <VariableName>Lambda</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName i:nil="true" />
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>Mew</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName i:nil="true" />
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>percentile</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName i:nil="true" />
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+    </InputVariables>
+    <OutputVariables>
+      <TycheOutputVariable>
+        <VariableName>x</VariableName>
+        <ChildNodeName>Rootfinding</ChildNodeName>
+        <ChildVariableName>x</ChildVariableName>
+        <CachedTypeData i:nil="true" />
+        <IsEnabled>true</IsEnabled>
+      </TycheOutputVariable>
+    </OutputVariables>
+    <IsContainer>true</IsContainer>
+    <RandomSeed>1328612099</RandomSeed>
+  </NestedSettings>
+  <Children>
+    <TycheNode xmlns="" i:type="TycheNodeNestedInputs">
+      <fAttachedData i:nil="true" />
+      <NodeType>NestedInputs</NodeType>
+      <Name>Inputs</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text></Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+    </TycheNode>
+    <TycheNode xmlns="" i:type="TycheNodeNestedOutputs">
+      <fAttachedData i:nil="true" />
+      <NodeType>NestedOutputs</NodeType>
+      <Name>Outputs</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text></Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+    </TycheNode>
+    <TycheNode xmlns="" i:type="TycheNodeRootfinding">
+      <fAttachedData i:nil="true" />
+      <NodeType>Rootfinding</NodeType>
+      <Name>Rootfinding</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text>arg Lambda = Inputs.Lambda;
+arg Mew = Inputs.Mew;
+arg percentile = Inputs.percentile;
+
+out x = Uniform( 1, 1 );
+x_LBound = Uniform( 0, 0 );
+
+FunctionsToZero =
+		percentile
+		- InverseGaussianDotCDF( Lambda, Mew, x );</Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+      <NestedSettings xmlns="" i:type="TycheSettingsRootfinding">
+        <InputVariables />
+        <OutputVariables />
+        <IsContainer>false</IsContainer>
+        <RandomSeed>1122840626</RandomSeed>
+        <ZeroFunctionsVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName>FunctionsToZero</ChildVariableName>
+        </ZeroFunctionsVariable>
+        <ZeroFunctionsJacobianVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName></ChildVariableName>
+        </ZeroFunctionsJacobianVariable>
+        <VariablesVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Output</ChildVariableType>
+          <ChildVariableName>x</ChildVariableName>
+        </VariablesVariable>
+        <VariablesLowerBoundsVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName>x_LBound</ChildVariableName>
+        </VariablesLowerBoundsVariable>
+        <VariablesUpperBoundsVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName></ChildVariableName>
+        </VariablesUpperBoundsVariable>
+        <MaximumStepsVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName></ChildVariableName>
+        </MaximumStepsVariable>
+        <FunctionsTolerancesVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName></ChildVariableName>
+        </FunctionsTolerancesVariable>
+        <VariablesTolerancesVariable>
+          <ChildNodeName></ChildNodeName>
+          <ChildVariableType>Local</ChildVariableType>
+          <ChildVariableName></ChildVariableName>
+        </VariablesTolerancesVariable>
+        <SuccessOutputVariableName>Rootfinding Success</SuccessOutputVariableName>
+        <SuccessInfoOutputVariableName>Rootfinding Success Info</SuccessInfoOutputVariableName>
+        <NumStepsOutputVariableName>Rootfinding Num Steps</NumStepsOutputVariableName>
+        <FunctionsHistoryOutputVariableName></FunctionsHistoryOutputVariableName>
+        <VariablesHistoryOutputVariableName></VariablesHistoryOutputVariableName>
+      </NestedSettings>
+      <Children>
+        <TycheNode xmlns="" i:type="TycheNodeNestedInputs">
+          <fAttachedData i:nil="true" />
+          <NodeType>NestedInputs</NodeType>
+          <Name>Inputs</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeNestedOutputs">
+          <fAttachedData i:nil="true" />
+          <NodeType>NestedOutputs</NodeType>
+          <Name>Outputs</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+        </TycheNode>
+      </Children>
+      <ChildrenEdges />
+    </TycheNode>
+  </Children>
+  <ChildrenEdges>
+    <TycheEdge>
+      <SourceNodeFullName>InverseGaussianDotCDFInverse\Inputs</SourceNodeFullName>
+      <SinkNodeFullName>InverseGaussianDotCDFInverse\Rootfinding</SinkNodeFullName>
+    </TycheEdge>
+    <TycheEdge>
+      <SourceNodeFullName>InverseGaussianDotCDFInverse\Rootfinding</SourceNodeFullName>
+      <SinkNodeFullName>InverseGaussianDotCDFInverse\Outputs</SinkNodeFullName>
+    </TycheEdge>
+  </ChildrenEdges>
+</TycheNode>

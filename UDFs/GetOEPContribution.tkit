@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="" i:type="TycheNodeContainer">
+  <fAttachedData i:nil="true" />
+  <NodeType>Container</NodeType>
+  <Name>GetOEPContribution</Name>
+  <Description></Description>
+  <Author>Wee Shen Teo (WT02)</Author>
+  <Text></Text>
+  <CacheResultValues>true</CacheResultValues>
+  <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+  <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+  <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+  <NumScenariosDefault>0</NumScenariosDefault>
+  <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+  <Breakpoints />
+  <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+    <InputVariables>
+      <TycheInputVariable>
+        <VariableName>ScenariosAndWeights</VariableName>
+        <AncestorNodeName>Operation</AncestorNodeName>
+        <AncestorVariableName>ScenariosAndWeights</AncestorVariableName>
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>Variable</VariableName>
+        <AncestorNodeName>Operation</AncestorNodeName>
+        <AncestorVariableName>Variable</AncestorVariableName>
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>SourceLookup</VariableName>
+        <AncestorNodeName>Operation</AncestorNodeName>
+        <AncestorVariableName>SourceLookup</AncestorVariableName>
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>LossLookup</VariableName>
+        <AncestorNodeName>Operation</AncestorNodeName>
+        <AncestorVariableName>LossLookup</AncestorVariableName>
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+    </InputVariables>
+    <OutputVariables>
+      <TycheOutputVariable>
+        <VariableName>OEPContribution</VariableName>
+        <ChildNodeName>Aggregate over Sim</ChildNodeName>
+        <ChildVariableName>OEPContribution</ChildVariableName>
+        <CachedTypeData i:nil="true" />
+        <IsEnabled>true</IsEnabled>
+      </TycheOutputVariable>
+    </OutputVariables>
+    <IsContainer>true</IsContainer>
+    <RandomSeed>844632977</RandomSeed>
+  </NestedSettings>
+  <Children>
+    <TycheNode xmlns="" i:type="TycheNodeNestedInputs">
+      <fAttachedData i:nil="true" />
+      <NodeType>NestedInputs</NodeType>
+      <Name>Inputs</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text></Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+    </TycheNode>
+    <TycheNode xmlns="" i:type="TycheNodeNestedOutputs">
+      <fAttachedData i:nil="true" />
+      <NodeType>NestedOutputs</NodeType>
+      <Name>Outputs</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text></Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+    </TycheNode>
+    <TycheNode xmlns="" i:type="TycheNodeOperation">
+      <fAttachedData i:nil="true" />
+      <NodeType>Operation</NodeType>
+      <Name>Split Scenarios and Weights</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text>// split out scenarios and weights
+
+arg ScenariosAndWeights = Inputs.ScenariosAndWeights;
+
+Scenarios = ToStochasticVariable( ScenariosAndWeights[0] );
+out Weights = ToStochasticVariable( ScenariosAndWeights[1] );
+
+// trim for relevant sims
+arg inVariable = Inputs.Variable;
+arg inSourceLookup = Inputs.SourceLookup;
+arg inLossLookup = Inputs.LossLookup;
+
+out Variable = inVariable&lt;&lt;Scenarios&gt;&gt;;
+out SourceLookup = inSourceLookup&lt;&lt;Scenarios&gt;&gt;;
+out LossLookup = inLossLookup&lt;&lt;Scenarios&gt;&gt;;
+
+// create target shape for each sim
+out TargetShape = Count[source,loss,mind]( Variable&lt;&lt;0&gt;&gt; );</Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+      <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+        <InputVariables />
+        <OutputVariables />
+        <IsContainer>false</IsContainer>
+        <RandomSeed>1461333139</RandomSeed>
+      </NestedSettings>
+      <Children />
+      <ChildrenEdges />
+    </TycheNode>
+    <TycheNode xmlns="" i:type="TycheNodeParallel">
+      <fAttachedData i:nil="true" />
+      <NodeType>Parallel</NodeType>
+      <Name>Pick out Entry</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text>arg TargetShape = 'Split Scenarios and Weights'.TargetShape;
+
+// pick out relevant event
+
+argparallel Variable = 'Split Scenarios and Weights'.Variable;
+argparallel SourceLookup = 'Split Scenarios and Weights'.SourceLookup;
+argparallel LossLookup = 'Split Scenarios and Weights'.LossLookup;
+out OEPContribution =
+		PadToPattern( Variable[SourceLookup,LossLookup], TargetShape, 0 );</Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+      <NestedSettings xmlns="" i:type="TycheSettingsParallel">
+        <InputVariables />
+        <OutputVariables />
+        <IsContainer>false</IsContainer>
+        <RandomSeed>247384407</RandomSeed>
+        <ParalleliseBy>Scenarios</ParalleliseBy>
+        <ParallelisationMethod>Threads</ParallelisationMethod>
+        <LocalScenarioCount>0</LocalScenarioCount>
+        <NumThreads>-1</NumThreads>
+        <NumberOfSimChunks>1</NumberOfSimChunks>
+        <AutomaticallyGlueSimChunks>false</AutomaticallyGlueSimChunks>
+        <FreeChunkAllocationsAfterExecution>false</FreeChunkAllocationsAfterExecution>
+        <Grid>
+          <GridTransferType>ByRequest</GridTransferType>
+          <HostName>localhost</HostName>
+          <MaximumGridRequests>100</MaximumGridRequests>
+          <PortRangeHighest>7460</PortRangeHighest>
+          <PortRangeLowest>7443</PortRangeLowest>
+          <Priority>
+            <Value>2000</Value>
+          </Priority>
+          <RuntimeDirectory i:nil="true" />
+          <UseGridEmulation>false</UseGridEmulation>
+          <GridSettingsOrigin>FromParent</GridSettingsOrigin>
+        </Grid>
+        <ReseedEachExecution>true</ReseedEachExecution>
+      </NestedSettings>
+      <Children>
+        <TycheNode xmlns="" i:type="TycheNodeNestedInputs">
+          <fAttachedData i:nil="true" />
+          <NodeType>NestedInputs</NodeType>
+          <Name>Inputs</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+        </TycheNode>
+        <TycheNode xmlns="" i:type="TycheNodeNestedOutputs">
+          <fAttachedData i:nil="true" />
+          <NodeType>NestedOutputs</NodeType>
+          <Name>Outputs</Name>
+          <Description></Description>
+          <Author>Wee Shen Teo (WT02)</Author>
+          <Text></Text>
+          <CacheResultValues>true</CacheResultValues>
+          <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+          <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+          <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+          <NumScenariosDefault>0</NumScenariosDefault>
+          <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+          <Breakpoints />
+        </TycheNode>
+      </Children>
+      <ChildrenEdges />
+    </TycheNode>
+    <TycheNode xmlns="" i:type="TycheNodeOperation">
+      <fAttachedData i:nil="true" />
+      <NodeType>Operation</NodeType>
+      <Name>Aggregate over Sim</Name>
+      <Description></Description>
+      <Author>Wee Shen Teo (WT02)</Author>
+      <Text>// apply weight and aggregate over sims
+
+arg Weights = 'Split Scenarios and Weights'.Weights;
+arg inOEPContribution = 'Pick out Entry'.OEPContribution;
+
+out OEPContribution = Sum[sims,mind]( Weights * inOEPContribution );</Text>
+      <CacheResultValues>true</CacheResultValues>
+      <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+      <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+      <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+      <NumScenariosDefault>0</NumScenariosDefault>
+      <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+      <Breakpoints />
+      <NestedSettings xmlns="" i:type="TycheSettingsContainer">
+        <InputVariables />
+        <OutputVariables />
+        <IsContainer>false</IsContainer>
+        <RandomSeed>1451974464</RandomSeed>
+      </NestedSettings>
+      <Children />
+      <ChildrenEdges />
+    </TycheNode>
+  </Children>
+  <ChildrenEdges>
+    <TycheEdge>
+      <SourceNodeFullName>GetOEPContribution\Inputs</SourceNodeFullName>
+      <SinkNodeFullName>GetOEPContribution\Split Scenarios and Weights</SinkNodeFullName>
+    </TycheEdge>
+    <TycheEdge>
+      <SourceNodeFullName>GetOEPContribution\Split Scenarios and Weights</SourceNodeFullName>
+      <SinkNodeFullName>GetOEPContribution\Pick out Entry</SinkNodeFullName>
+    </TycheEdge>
+    <TycheEdge>
+      <SourceNodeFullName>GetOEPContribution\Pick out Entry</SourceNodeFullName>
+      <SinkNodeFullName>GetOEPContribution\Aggregate over Sim</SinkNodeFullName>
+    </TycheEdge>
+    <TycheEdge>
+      <SourceNodeFullName>GetOEPContribution\Split Scenarios and Weights</SourceNodeFullName>
+      <SinkNodeFullName>GetOEPContribution\Aggregate over Sim</SinkNodeFullName>
+    </TycheEdge>
+    <TycheEdge>
+      <SourceNodeFullName>GetOEPContribution\Aggregate over Sim</SourceNodeFullName>
+      <SinkNodeFullName>GetOEPContribution\Outputs</SinkNodeFullName>
+    </TycheEdge>
+  </ChildrenEdges>
+</TycheNode>

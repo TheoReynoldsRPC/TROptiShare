@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TycheNode xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="" i:type="TycheNodeCSharp">
+  <fAttachedData i:nil="true" />
+  <NodeType>CSharp</NodeType>
+  <Name>ImportTextAsNumbers</Name>
+  <Description></Description>
+  <Author>Wee Shen Teo (WT02)</Author>
+  <Text></Text>
+  <CacheResultValues>true</CacheResultValues>
+  <NumScenariosSourceType>Unspecified</NumScenariosSourceType>
+  <NumScenariosSourceNodeName></NumScenariosSourceNodeName>
+  <NumScenariosSourceVariableName></NumScenariosSourceVariableName>
+  <NumScenariosDefault>0</NumScenariosDefault>
+  <IsUserDefinedFunctionContents>false</IsUserDefinedFunctionContents>
+  <Breakpoints />
+  <CSharpSettings>
+    <FullProjectPath>.\ImportTextAsNumbers_Files\ImportTextAsNumbers.csproj</FullProjectPath>
+    <FullDLLPath></FullDLLPath>
+    <OperationName>ImportTextAsNumbers.ImportTextAsNumbers</OperationName>
+    <DisplayUIElement>false</DisplayUIElement>
+    <InputVariables>
+      <TycheInputVariable>
+        <VariableName>Filepath</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName i:nil="true" />
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+      <TycheInputVariable>
+        <VariableName>Deliminator</VariableName>
+        <AncestorNodeName></AncestorNodeName>
+        <AncestorVariableName i:nil="true" />
+        <IsParallel>false</IsParallel>
+        <IsBranchSelector>false</IsBranchSelector>
+      </TycheInputVariable>
+    </InputVariables>
+    <Data i:nil="true" />
+    <OutputVariables>
+      <TycheOutputVariable>
+        <VariableName>outputvariable</VariableName>
+        <ChildNodeName></ChildNodeName>
+        <ChildVariableName></ChildVariableName>
+        <CachedTypeData i:nil="true" />
+        <IsEnabled>true</IsEnabled>
+      </TycheOutputVariable>
+    </OutputVariables>
+    <DebugOption>None</DebugOption>
+    <BuildMode>Release</BuildMode>
+  </CSharpSettings>
+</TycheNode>
